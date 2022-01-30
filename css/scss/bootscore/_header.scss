@@ -1,0 +1,47 @@
+@media (max-width: 782px) {
+  #wpadminbar {
+    position: fixed;
+  }
+
+  .logged-in.admin-bar {
+
+    .fixed-top,
+    .offcanvas:not(.offcanvas-bottom),
+    .modal-dialog {
+      top: 46px;
+    }
+
+    .modal-fullscreen,
+    .modal-fullscreen-sm-down,
+    .modal-fullscreen-md-down,
+    .modal-fullscreen-lg-down,
+    .modal-fullscreen-xl-down,
+    .modal-fullscreen-xxl-down {
+      height: calc(100% - 46px);
+    }
+  }
+}
+
+@media (min-width: 783px) {
+  .logged-in.admin-bar {
+
+    .fixed-top,
+    .offcanvas:not(.offcanvas-bottom),
+    .modal-dialog {
+      top: 32px;
+    }
+
+    .modal-fullscreen,
+    .modal-fullscreen-sm-down,
+    .modal-fullscreen-md-down,
+    .modal-fullscreen-lg-down,
+    .modal-fullscreen-xl-down,
+    .modal-fullscreen-xxl-down {
+      height: calc(100% - 32px);
+    }
+  }
+}
+
+#nav-main .menu-item:last-child .nav-link {
+  padding-right: 0;
+}

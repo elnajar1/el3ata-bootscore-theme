@@ -246,8 +246,8 @@ function bootscore_scripts() {
 
   // Get modification time. Enqueue files with modification date to prevent browser from loading cached scripts and styles when file content changes.
   $modificated_styleCss = date('YmdHi', filemtime(get_stylesheet_directory() . '/style.css'));
-  if (file_exists(get_template_directory() . '/css/lib/bootstrap.min.css')) {
-    $modificated_bootscoreCss = date('YmdHi', filemtime(get_template_directory() . '/css/lib/bootstrap.min.css'));
+  if (file_exists(get_template_directory() . '/css/lib/bootstrap_new.min.css')) {
+    $modificated_bootscoreCss = date('YmdHi', filemtime(get_template_directory() . '/css/lib/bootstrap_new.min.css'));
   } else {
     $modificated_bootscoreCss = 1;
   }

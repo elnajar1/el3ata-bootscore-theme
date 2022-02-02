@@ -14,13 +14,13 @@
       $childs = get_terms( array(
         'taxonomy' => 'lecture_category',
         'child_of'      => $parent->ID, 
-        'hierarchical' => true,
+        //'hierarchical' => true,
         'depth'  => 1,
         'hide_empty'  => false
       ));
       
       foreach( $childs as $child ):
-        echo "- : " . $child->name .  "<br>";
+        echo "- " . $child->name .  "<br>";
       endforeach ;  
       
   endforeach ;              

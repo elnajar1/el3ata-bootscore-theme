@@ -14,14 +14,14 @@
       //echo "<pre>"; var_dump($parent); echo "</pre>";
       
       $level_tow_clilds = get_terms( array(
-        'taxonomy' => 'lecture_category',
+        'taxonomy'    => 'lecture_category',
         'parent'      => $level_one_clild->ID, 
-        'depth'  => 1,
+        'depth'       => 1,
         'hide_empty'  => false
       ));
       foreach( $level_tow_clilds as $level_tow_clild ):
         echo "- " . $level_tow_clild->name . "<hr>" ;
-        //echo "<pre>"; var_dump($child); echo "</pre>"; 
+        echo "<pre>"; var_dump($child); echo "</pre>"; 
       endforeach ;  
       
   endforeach ;              

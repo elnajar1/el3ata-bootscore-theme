@@ -261,7 +261,7 @@ function bootscore_scripts() {
   // bootScore
   require_once 'inc/scss-compiler.php';
   bootscore_compile_scss();
-  wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/lib/bootstrap.min.css', array(), $modificated_bootscoreCss);
+  wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/lib/bootstrap_new.min.css', array(), $modificated_bootscoreCss);
 
   // Fontawesome
   wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/lib/fontawesome.min.css', array(), $modificated_fontawesomeCss);

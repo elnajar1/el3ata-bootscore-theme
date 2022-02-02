@@ -6,8 +6,18 @@
       'hide_empty' => false
   ) );
 
-  foreach( $parent as $child ):
-    echo "parent : " . $child->name .  "<br>";
+  foreach( $parents as $parent ):
+      echo "parent : " . $parent->name .  "<br>";
+      
+      $child= get_terms( array(
+        'taxonomy' => $parent,
+        'hide_empty' => false
+      ));
+      
+      foreach( $parent as $child ):
+        echo "- clild : " . $child->name .  "<br>";
+      endforeach ;  
+      
   endforeach ;              
 ?>
     <div class = "row">

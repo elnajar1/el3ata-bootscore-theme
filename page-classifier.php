@@ -3,11 +3,12 @@
   $parents = get_terms( array(
       'taxonomy' => 'lecture_category',
       'parent' => '0' ,
+      'depth'  => 1,
       'hide_empty' => false
   ) );
 
   foreach( $parents as $parent ):
-      echo "parent : " . $parent->name .  "<br>";
+      echo $parent->name .  "<br>";
       
       //$current_term_id = get_queried_object_id();
       $childs = get_terms( array(
@@ -19,7 +20,7 @@
       ));
       
       foreach( $childs as $child ):
-        echo "- clild : " . $child->name .  "<br>";
+        echo "- : " . $child->name .  "<br>";
       endforeach ;  
       
   endforeach ;              

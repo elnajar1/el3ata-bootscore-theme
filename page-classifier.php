@@ -104,7 +104,7 @@
                   
                   echo "<ul>";
                   foreach ( $level_three_clild_posts as $post ) : setup_postdata( $post ); 
-                    echo "<li><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>";
+                    echo "<li><a href='<?php the_permalink($post); ?>'><?php the_title($post); ?></a></li>";
                   endforeach;  
                   echo "</ul>";
                   wp_reset_postdata(); // ###level_one_clild_posts###

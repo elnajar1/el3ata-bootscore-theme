@@ -8,20 +8,17 @@
   ) );
   
   if ( !empty($parents) ) :
-    $output = '<select>';
     foreach( $parents as $category ) {
         if( $category->parent == 0 ) {
-            $output.= '<optgroup label="'. esc_attr( $category->name ) .'">';
+            echo esc_attr( $category->name ) ;
             foreach( $parents as $subcategory ) {
                 if($subcategory->parent == $category->term_id) {
-                $output.= '<option value="'. esc_attr( $subcategory->term_id ) .'">
-                    '. esc_html( $subcategory->name ) .'</option>';
+                echo $subcategory->term_id );
                 }
             }
-            $output.='</optgroup>';
+            
         }
     }
-    $output.='</select>';
     echo $output;
   endif;
   

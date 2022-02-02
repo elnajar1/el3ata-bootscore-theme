@@ -15,7 +15,7 @@
       
       $level_tow_clilds = get_terms( array(
         'taxonomy'    => 'lecture_category',
-        'parent'      => $level_one_clild->ID, 
+        'parent'      => $level_one_clild, 
         'depth'       => 1,
         'hide_empty'  => false
       ));

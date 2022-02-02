@@ -11,7 +11,7 @@
   foreach( $level_one_clilds as $level_one_clild ):
       
       echo $level_one_clild->name . "<hr>" ;
-      //echo "<pre>"; var_dump($parent); echo "</pre>";
+      echo "<pre>"; var_dump($level_one_clild); echo "</pre>";
       
       $level_tow_clilds = get_terms( array(
         'taxonomy'    => 'lecture_category',
@@ -21,7 +21,7 @@
       ));
       foreach( $level_tow_clilds as $level_tow_clild ):
         echo "- " . $level_tow_clild->name . "<hr>" ;
-        echo "<pre>"; var_dump($child); echo "</pre>"; 
+        echo "<pre>"; var_dump($level_tow_clild); echo "</pre>"; 
       endforeach ;  
       
   endforeach ;              

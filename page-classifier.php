@@ -1,6 +1,6 @@
 <?php 
   get_header();
-  $parent = get_terms( array(
+  $parents = get_terms( array(
       'taxonomy' => 'lecture_category',
       'parent' => '0' ,
       'hide_empty' => false

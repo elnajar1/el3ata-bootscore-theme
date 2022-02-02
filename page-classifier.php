@@ -16,10 +16,12 @@
           <ul>   
             <?php 
                 $get_parent_cats = array(
-                    'parent' => '0' //get top level categories only
-                ); 
+                    'parent' => '0', //get top level categories only
+                    'taxonomy' => 'lecture_category',
+                    'hide_empty' => false
+                );
     
-                $all_categories = get_categories( $get_parent_cats );//get parent categories 
+                $all_categories = get_terms( $get_parent_cats );//get parent categories 
     
                 foreach( $all_categories as $single_category ){
                     //for each category, get the ID

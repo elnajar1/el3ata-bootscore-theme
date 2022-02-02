@@ -132,7 +132,7 @@ ow_categories_with_subcategories_and_posts( 'lecture_category', 'lecture' );
     
                     $query = new WP_Query( array( 'cat'=> $catID, 'posts_per_page'=>10 ) );
                     while( $query->have_posts() ):$query->the_post();
-                     echo '<li><a href="'.get_the_permalink().'">'.get_the_title().'</a></li>';
+                     echo get_the_title();
                     endwhile;
                     wp_reset_postdata();
     

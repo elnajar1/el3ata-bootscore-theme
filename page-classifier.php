@@ -1,34 +1,15 @@
 <?php 
   get_header();
-  $lecture_categories = get_terms( array(
+  $parent = get_terms( array(
       'taxonomy' => 'lecture_category',
+      'parent' => '0' ,
       'hide_empty' => false
   ) );
 
+  foreach( $parent as $child ):
+    echo "parent : " . $child->name .  "<br>";
+  endforeach ;              
 ?>
-
-<?php
-$parent_cat_arg = array('hide_empty' => false, 'parent' => 0 );
-$parent_cat = get_terms('lecture_category',$parent_cat_arg);//category name
-
-foreach ($parent_cat as $catVal) {
-
-    echo '<h2>'.$catVal->name.'</h2>'; //Parent Category
-
-    $child_arg = array( 'hide_empty' => false, 'parent' => $catVal->term_id );
-    $child_cat = get_terms( 'category', $child_arg );
-
-    echo '<ul>';
-        foreach( $child_cat as $child_term ) {
-            echo '<li>'.$child_term->name . '</li>'; //Child Category
-        }
-    echo '</ul>';
-
-}
-?>
-<div id="content" class="site-content container py-5 mt-5">
-  <div id="primary" class="content-area">
-    
     <div class = "row">
       <div class = "col">
         

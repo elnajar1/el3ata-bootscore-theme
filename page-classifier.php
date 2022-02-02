@@ -12,7 +12,7 @@
       //$current_term_id = get_queried_object_id();
       $childs = get_terms( array(
         'taxonomy'    => $parent->ID,
-        'parent'      => get_queried_object_id(), 
+       // 'parent'      => get_queried_object_id(), 
         'hide_empty'  => false
       ));
       

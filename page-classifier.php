@@ -24,7 +24,7 @@
   
   foreach( $parents as $parent ):
       echo $parent->name . "<hr>" ;
-      pint_r($parent->name) ;
+      var_dump($parent->name) ;
       
       //$current_term_id = get_queried_object_id();
       $childs = get_terms( array(
@@ -37,7 +37,7 @@
       
       foreach( $childs as $child ):
         echo "- " . $child->name . "<hr>" ;
-        print_r($child->name);
+        var_dump($child->name);
       endforeach ;  
       
   endforeach ;              

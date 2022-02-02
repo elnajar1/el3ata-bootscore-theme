@@ -9,12 +9,12 @@
   foreach( $parents as $parent ):
       echo "parent : " . $parent->name .  "<br>";
       
-      $child= get_terms( array(
+      $childs = get_terms( array(
         'taxonomy' => $parent,
         'hide_empty' => false
       ));
       
-      foreach( $parent as $child ):
+      foreach( $childs as $child ):
         echo "- clild : " . $child->name .  "<br>";
       endforeach ;  
       

@@ -43,7 +43,7 @@
 
       <div class="fixed-top bg-light">
 
-        <nav id="nav-main" class="navbar navbar-expand-lg navbar-light">
+        <nav id="nav-main" class="navbar navbar-expand-lg navbar-dark">
 
           <div class="container">
 

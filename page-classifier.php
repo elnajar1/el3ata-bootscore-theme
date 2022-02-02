@@ -8,103 +8,23 @@
 ?>
 
 <?php
-function ow_categories_with_subcategories_and_posts( $taxonomy, $post_type ) {
+$parent_cat_arg = array('hide_empty' => false, 'parent' => 0 );
+$parent_cat = get_terms('lecture_category',$parent_cat_arg);//category name
 
-    // Get the top categories that belong to the provided taxonomy (the ones without parent)
-    $categories = get_terms( 
-        array(
-            'taxonomy'   => $taxonomy,
-            'parent'     => 0, // <-- No Parent
-            'orderby'    => 'term_id',
-            'hide_empty' => true // <!-- change to false to also display empty ones
-        )
-    );
-    ?>
-    <div>
-        <?php
-        // Iterate through all categories to display each individual category
-        foreach ( $categories as $category ) {
+foreach ($parent_cat as $catVal) {
 
-            $cat_name = $category->name;
-            $cat_id   = $category->term_id;
-            $cat_slug = $category->slug;
+    echo '<h2>'.$catVal->name.'</h2>'; //Parent Category
 
-            // Display the name of each individual category
-            echo '<h3>Category: ' . $cat_name . ' - ID: ' . $cat_id . ' - Slug: ' . $cat_slug  . '</h3>'; 
+    $child_arg = array( 'hide_empty' => false, 'parent' => $catVal->term_id );
+    $child_cat = get_terms( 'category', $child_arg );
 
-
-            // Get all the subcategories that belong to the current category
-            $subcategories = get_terms(
-                array(
-                    'taxonomy'   => $taxonomy,
-                    'parent'     => $cat_id, // <-- The parent is the current category
-                    'orderby'    => 'term_id',
-                    'hide_empty' => true
-                )
-            );
-            ?>
-            <div>
-                <?php
-                // Iterate through all subcategories to display each individual subcategory
-                foreach ( $subcategories as $subcategory ) {
-
-                    $subcat_name = $subcategory->name;
-                    $subcat_id   = $subcategory->term_id;
-                    $subcat_slug = $subcategory->slug;
-
-                    // Display the name of each individual subcategory with ID and Slug
-                    echo '<h4>Subcategory: ' . $subcat_name . ' - ID: ' . $subcat_id . ' - Slug: ' . $subcat_slug  . '</h4>';
-
-                    // Get all posts that belong to this specific subcategory
-                    $posts = new WP_Query(
-                        array(
-                            'post_type'      => $post_type,
-                            'posts_per_page' => -1, // <-- Show all posts
-                            'hide_empty'     => true,
-                            'order'          => 'ASC',
-                            'tax_query'      => array(
-                                array(
-                                    'taxonomy' => $taxonomy,
-                                    'terms'    => $subcat_id,
-                                    'field'    => 'id'
-                                )
-                            )
-                        )
-                    );
-
-                    // If there are posts available within this subcategory
-                    if ( $posts->have_posts() ):
-                        ?>
-                        <div>
-                            <?php
-
-                            // As long as there are posts to show
-                            while ( $posts->have_posts() ): $posts->the_post();
-
-                                //Show the title of each post with the Post ID
-                                ?>
-                                <p>Post: <?php the_title(); ?> - ID: <?php the_ID(); ?></p>
-                                <?php
-
-                            endwhile;
-                            ?>
-                        </div>
-                        <?php
-                    else:
-                        echo 'No posts found';
-                    endif;
-
-                    wp_reset_query();
-                }
-                ?>
-            </div>
-            <?php
+    echo '<ul>';
+        foreach( $child_cat as $child_term ) {
+            echo '<li>'.$child_term->name . '</li>'; //Child Category
         }
-        ?>
-    </div>
-    <?php
+    echo '</ul>';
+
 }
-ow_categories_with_subcategories_and_posts( 'lecture_category', 'lecture' );
 ?>
 <div id="content" class="site-content container py-5 mt-5">
   <div id="primary" class="content-area">

@@ -6,6 +6,55 @@
   ) );
 
 ?>
+<?php   
+    $taxonomy = 'lecture_category';
+    $postType = 'lecture';
+    $terms = get_terms(['taxonomy' => $taxonomy, 'orderby' => 'term_id', 'parent' => 0, 'hide_empty' => false]);
+?>
+<div class="">
+<?php
+    foreach($terms as $term){
+        echo '<h3>' . $term->name . '</h3>';
+        $childTerms = get_terms(['taxonomy' => $taxonomy, 'orderby' => 'term_id', 'parent' => $term->term_id, 'hide_empty' => false]);
+
+        foreach($childTerms as $childTerm)
+        {
+            $posts = get_posts(array('post_status' =>'publish','post_type' => $postType,
+                    array(
+                        'taxonomy' => $taxonomy,
+                        'field' => 'term_id',
+                        'terms' => $childTerm->term_id,
+                    ),));
+            ?>
+            <div class="add-accordion">
+                <h3><?php echo $childTerm->name ?></h3>
+                <div class="add-accordion">
+                    <?php foreach($posts as $post){ ?>
+                        <h3><?php echo $post->post_title ?></h3>
+                        <div class="">
+                            <?php echo get_the_content($post->ID) ?>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+            <?php
+        }
+    }
+?>
+</div>
+<script>
+    jQuery(function(){
+        jQuery('.add-accordion').accordion({
+            collapsible: true,
+            heightStyle: "content",
+            active: false,
+            animate: 500,
+            icons: false
+        });
+    });
+</script>
+<?php wp_enqueue_script('jquery-ui-accordion'); ?>
+
 <div id="content" class="site-content container py-5 mt-5">
   <div id="primary" class="content-area">
     

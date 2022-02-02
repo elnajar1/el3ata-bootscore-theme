@@ -4,7 +4,7 @@
       'taxonomy' => 'lecture_category',
       'hide_empty' => false
   ) );
-  
+
 ?>
 <div id="content" class="site-content container py-5 mt-5">
   <div id="primary" class="content-area">
@@ -14,7 +14,17 @@
 
         <div class="">
           <pre>
-            <?php var_dump($lecture_categories); ?>
+            <?php
+              // Check if any term exists
+              if ( ! empty( $lecture_categories ) && is_array( $lecture_categories ) ) {
+                  // Run a loop and print them all
+                  foreach ( $lecture_categories as $lecture_category ) { ?>
+                      <a href="<?php echo esc_url( get_term_link( $lecture_category ) ) ?>">
+                          <?php echo $lecture_category->name; ?>
+                      </a><?php
+                  }
+              } 
+            ?>
           </pre>
         </div>
         

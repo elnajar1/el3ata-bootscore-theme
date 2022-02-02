@@ -9,8 +9,10 @@
   foreach( $parents as $parent ):
       echo "parent : " . $parent->name .  "<br>";
       
+      $current_term_id = get_queried_object_id();
       $childs = get_terms( array(
-        'taxonomy' => $parent,
+        'taxonomy' => $parent-ID,
+        'parent' => $current_term_id, 
         'hide_empty' => false
       ));
       

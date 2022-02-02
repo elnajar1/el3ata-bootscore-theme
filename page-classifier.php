@@ -23,6 +23,22 @@
                       <a href="<?php echo esc_url( get_term_link( $lecture_category ) ) ?>">
                           <?php echo $lecture_category->name; ?>
                       </a>
+                      <ul>
+                        <?php
+                          $args = array(
+                            'post_type'   => 'lecture', 
+                            'category'    => $lecture_category->ID
+                          );
+                          $lectures = get_posts( $args );
+                         
+                          foreach ( $lectures as $lecture ) { ?>
+                            <li>
+                              <a href="<?php echo esc_url( get_term_link( $lecture ) ) ?>">
+                                  <?php echo $lecture->name; ?>
+                              </a>
+                            </li>
+                          <?php } ?>
+                      </ul>
                     </li>
                   <?php
                   }

@@ -1,25 +1,26 @@
 <?php 
   get_header();
-  $parents = get_terms( array(
+  $parent_ID = 13;
+  $level_one_clilds = get_terms( array(
       'taxonomy'   => 'lecture_category',
-      'parent'     => '13' ,
+      'parent'     => $parent_ID ,
       'depth'      => 1,
       'hide_empty' => false
   ) );
   
-  foreach( $parents as $parent ):
-      echo $parent->name . "<hr>" ;
+  foreach( $level_one_clilds as $level_one_clild ):
+      echo $level_one_clilds->name . "<hr>" ;
       //echo "<pre>"; var_dump($parent); echo "</pre>";
       
-      $childs = get_terms( array(
+      $level_tow_clilds = get_terms( array(
         'taxonomy' => 'lecture_category',
-        'parent'      => $parent->ID, 
+        'parent'      => $level_one_clild->ID, 
         'depth'  => 1,
         'hide_empty'  => false
       ));
       
-      foreach( $childs as $child ):
-        echo "- " . $child->name . "<hr>" ;
+      foreach( $level_tow_clilds as $level_tow_clild ):
+        echo "- " . $level_tow_clild->name . "<hr>" ;
         //echo "<pre>"; var_dump($child); echo "</pre>"; 
       endforeach ;  
       

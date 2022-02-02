@@ -1,15 +1,16 @@
 <?php 
   get_header();
-  $parent_ID = 13;
+  $parent_ID = 13; //البناء المنهجي
+ 
   $level_one_clilds = get_terms( array(
       'taxonomy'   => 'lecture_category',
       'parent'     => $parent_ID ,
       'depth'      => 1,
       'hide_empty' => false
   ) );
-  
   foreach( $level_one_clilds as $level_one_clild ):
-      echo $level_one_clilds->name . "<hr>" ;
+      
+      echo $level_one_clild->name . "<hr>" ;
       //echo "<pre>"; var_dump($parent); echo "</pre>";
       
       $level_tow_clilds = get_terms( array(
@@ -18,7 +19,6 @@
         'depth'  => 1,
         'hide_empty'  => false
       ));
-      
       foreach( $level_tow_clilds as $level_tow_clild ):
         echo "- " . $level_tow_clild->name . "<hr>" ;
         //echo "<pre>"; var_dump($child); echo "</pre>"; 

@@ -27,7 +27,7 @@
                         <?php
                           $args = array(
                             'post_type'   => 'lecture', 
-                            'category'    => $lecture_category->ID
+                            'category'    => $lecture_category
                           );
                           $lectures = get_posts( $args );
                          

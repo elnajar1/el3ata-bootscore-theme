@@ -44,19 +44,19 @@
               echo "</ul>";
               wp_reset_postdata(); // #level_one_clild_posts#
               
-            //--level_tow_clilds--
-            $level_tow_clilds = get_terms( array(
+            //--level_two_clilds--
+            $level_two_clilds = get_terms( array(
               'taxonomy'    => 'lecture_category',
               'parent'      => $level_one_clild->term_id, 
               'depth'       => 1,
               'hide_empty'  => false
             ));
-            foreach( $level_tow_clilds as $level_tow_clild ):
+            foreach( $level_two_clilds as $level_two_clild ):
               
-              echo "- " . $level_tow_clild->name . "<hr>" ;
+              echo "- " . $level_two_clild->name . "<hr>" ;
                 
                 // ##level_one_clild_posts##
-                $level_tow_clild_posts = get_posts(array(
+                $level_two_clild_posts = get_posts(array(
                     'post_type' => 'lecture',
                     'numberposts' => -1,
                     'tax_query' => array(
@@ -73,12 +73,12 @@
                     echo "<li><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>";
                   endforeach;  
                   echo "</ul>";
-                  wp_reset_postdata(); // ##level_tow_clild_posts##
+                  wp_reset_postdata(); // ##level_two_clild_posts##
                  
                //---level_three_clilds ---
                $level_three_clilds = get_terms( array(
                 'taxonomy'    => 'lecture_category',
-                'parent'      => $level_tow_clild->term_id, 
+                'parent'      => $level_two_clild->term_id, 
                 'depth'       => 1,
                 'hide_empty'  => false
               ));
@@ -108,7 +108,7 @@
                  
               endforeach ; //-level_three_clild-
               
-            endforeach ;  //--level_tow_clild--
+            endforeach ;  //--level_two_clild--
             
         endforeach ; //---level_one_clilds---
         ?>

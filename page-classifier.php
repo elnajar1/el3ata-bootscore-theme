@@ -12,7 +12,9 @@
       //$current_term_id = get_queried_object_id();
       $childs = get_terms( array(
         'taxonomy' => 'lecture_category',
-        'parent'      => $parent->ID, 
+        'child_of'      => $parent->ID, 
+        'hierarchical' => true,
+        'depth'  => 1,
         'hide_empty'  => false
       ));
       

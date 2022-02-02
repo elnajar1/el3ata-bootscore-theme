@@ -2,30 +2,15 @@
   get_header();
   $parents = get_terms( array(
       'taxonomy'   => 'lecture_category',
-      'parent'     => '13' ,
+      'child_of'     => '13' ,
       'depth'      => 1,
       'hide_empty' => false
   ) );
-  
-  if ( !empty($parents) ) :
-    foreach( $parents as $category ) {
-        if( $category->parent == 0 ) {
-            echo esc_attr( $category->name ) ;
-            foreach( $parents as $subcategory ) {
-                if($subcategory->parent == $category->term_id) {
-                echo $subcategory->term_id ;
-                }
-            }
-            
-        }
-    }
-  endif;
   
   foreach( $parents as $parent ):
       echo $parent->name . "<hr>" ;
       //echo "<pre>"; var_dump($parent); echo "</pre>";
       
-      //$current_term_id = get_queried_object_id();
       $childs = get_terms( array(
         'taxonomy' => 'lecture_category',
         'child_of'      => $parent->ID, 

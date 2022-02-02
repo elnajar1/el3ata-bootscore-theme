@@ -13,13 +13,13 @@
       
       $childs = get_terms( array(
         'taxonomy' => 'lecture_category',
-        'child_of'      => $parent->ID, 
+        'parent'      => $parent->ID, 
         'depth'  => 1,
         'hide_empty'  => false
       ));
       
       foreach( $childs as $child ):
-       // echo "- " . $child->name . "<hr>" ;
+        echo "- " . $child->name . "<hr>" ;
         //echo "<pre>"; var_dump($child); echo "</pre>"; 
       endforeach ;  
       

@@ -11,8 +11,8 @@
       
       //$current_term_id = get_queried_object_id();
       $childs = get_terms( array(
-        'taxonomy'    => $parent->ID,
-       // 'parent'      => get_queried_object_id(), 
+        'taxonomy' => 'lecture_category',
+        'parent'      => $parent->ID, 
         'hide_empty'  => false
       ));
       

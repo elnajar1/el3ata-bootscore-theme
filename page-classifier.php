@@ -42,8 +42,7 @@
               </li>
               <?php endforeach; // Term Post foreach ?>
               </ul>
-              <?php wp_reset_postdata(); ?>
-              <?php endforeach;
+              <?php wp_reset_postdata(); 
               
             //--level_tow_clilds--
             $level_tow_clilds = get_terms( array(

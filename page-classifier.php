@@ -64,6 +64,7 @@
                     array(
                       'taxonomy' => 'lecture_category',
                       'field' => $level_two_clild->term_id, 
+                      'terms' => $level_two_clild->term_id, 
                       'include_children' => false
                     )
                    )
@@ -95,6 +96,7 @@
                     array(
                       'taxonomy' => 'lecture_category',
                       'field' => $level_three_clild->term_id, 
+                      'terms' => $level_three_clild->term_id, 
                       'include_children' => false
                     )
                    )

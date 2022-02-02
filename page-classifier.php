@@ -6,7 +6,25 @@
       'depth'  => 1,
       'hide_empty' => false
   ) );
-
+  
+  if ( !empty($parents) ) :
+    $output = '<select>';
+    foreach( $parents as $category ) {
+        if( $category->parent == 0 ) {
+            $output.= '<optgroup label="'. esc_attr( $category->name ) .'">';
+            foreach( $taxonomies as $subcategory ) {
+                if($subcategory->parent == $category->term_id) {
+                $output.= '<option value="'. esc_attr( $subcategory->term_id ) .'">
+                    '. esc_html( $subcategory->name ) .'</option>';
+                }
+            }
+            $output.='</optgroup>';
+        }
+    }
+    $output.='</select>';
+    echo $output;
+  endif;
+  
   foreach( $parents as $parent ):
       echo $parent->name .  "<br>";
       

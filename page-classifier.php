@@ -13,7 +13,7 @@
             echo esc_attr( $category->name ) ;
             foreach( $parents as $subcategory ) {
                 if($subcategory->parent == $category->term_id) {
-                echo $subcategory->term_id );
+                echo $subcategory->term_id ;
                 }
             }
             
@@ -23,7 +23,8 @@
   endif;
   
   foreach( $parents as $parent ):
-      echo $parent->name .  "<br>";
+      echo $parent->name . "<hr>" ;
+      pint_r($parent->name) ;
       
       //$current_term_id = get_queried_object_id();
       $childs = get_terms( array(
@@ -35,7 +36,8 @@
       ));
       
       foreach( $childs as $child ):
-        echo "- " . $child->name .  "<br>";
+        echo "- " . $child->name . "<hr>" ;
+        print_r($child->name);
       endforeach ;  
       
   endforeach ;              

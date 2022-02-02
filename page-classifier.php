@@ -32,6 +32,7 @@
                 array(
                   'taxonomy' => 'lecture_category',
                   'field' => $level_one_clild->term_id, 
+                  'terms' => $level_one_clild->term_id, 
                   'include_children' => false
                 )
                )

@@ -2,7 +2,7 @@
   get_header();
   $parents = get_terms( array(
       'taxonomy' => 'lecture_category',
-      'parent' => '0' ,
+      'parent' => '13' ,
       'hide_empty' => false
   ) );
   

@@ -13,19 +13,22 @@
       <div class = "col">
 
         <div class="">
-          <pre>
+          <ul>
             <?php
               // Check if any term exists
               if ( ! empty( $lecture_categories ) && is_array( $lecture_categories ) ) {
                   // Run a loop and print them all
                   foreach ( $lecture_categories as $lecture_category ) { ?>
+                    <li>
                       <a href="<?php echo esc_url( get_term_link( $lecture_category ) ) ?>">
                           <?php echo $lecture_category->name; ?>
-                      </a><?php
+                      </a>
+                    </li>
+                  <?php
                   }
               } 
             ?>
-          </pre>
+          </ul>
         </div>
         
       </div>

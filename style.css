@@ -20,5 +20,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+body {
+  font-family: 'Tajawal', sans-serif;
+} 
 
-@font-face {font-family: "Janna LT"; src: url("//db.onlinewebfonts.com/t/15c14edcc44ce5f6b601206439e7eba2.eot"); src: url("//db.onlinewebfonts.com/t/15c14edcc44ce5f6b601206439e7eba2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/15c14edcc44ce5f6b601206439e7eba2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/15c14edcc44ce5f6b601206439e7eba2.woff") format("woff"), url("//db.onlinewebfonts.com/t/15c14edcc44ce5f6b601206439e7eba2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/15c14edcc44ce5f6b601206439e7eba2.svg#Janna LT") format("svg"); }
+

@@ -244,6 +244,10 @@ add_filter('widget_text', 'do_shortcode');
 //Enqueue scripts and styles
 function bootscore_scripts() {
 
+ 
+ //Janna LT Bold Font
+wp_enqueue_style( 'Janna-LT-Bold-Font', get_template_directory() . '/fonts/Janna LT Bold.ttf', false ); 
+
   // Get modification time. Enqueue files with modification date to prevent browser from loading cached scripts and styles when file content changes.
   $modificated_styleCss = date('YmdHi', filemtime(get_stylesheet_directory() . '/style.css'));
   if (file_exists(get_template_directory() . '/css/lib/bootstrap.min.css')) {

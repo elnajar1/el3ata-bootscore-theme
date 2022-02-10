@@ -5,7 +5,7 @@
 }
 
 .level-one-clild, .level-two-clild, .level-three-clild{
-  padding: 0;
+  margin: 0;
   background: var(--bs-secondary);
   font-size: bold;
   
@@ -13,7 +13,7 @@
 }
 
 .level-one-clild-posts, .level-two-clild-posts, .level-three-clild-posts{
-  padding: 0;
+  margin: 0;
   border-right : 5px solid var(--bs-warning);
 }
 

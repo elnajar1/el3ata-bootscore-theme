@@ -36,11 +36,11 @@
 } 
 
 /****** Posts ******/
-ul {
+.classifier-container ul {
   list-style-type: none;
 }
 
-li {
+.classifier-container li {
   padding: 5px;
   margin: 5px;
   border: 0.5px solid gray;
@@ -48,13 +48,13 @@ li {
 }
 
 .level-one-clild-posts {
-  argin-right: 10px; 
+  margin-right: 10px; 
 } 
 
 .level-two-clild-posts {
-  argin-right: 20px; 
+  margin-right: 20px; 
 }
 
 .level-three-clild-posts {
-  argin-right: 30px; 
+  margin-right: 30px; 
 } 

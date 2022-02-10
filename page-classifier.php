@@ -18,7 +18,9 @@
             'taxonomy'   => 'lecture_category',
             'parent'     => $parent_ID ,
             'depth'      => 1,
-            'hide_empty' => false
+            'orderby'    => 'ID', 
+            'order'      => 'DESC', 
+            'hide_empty' => true 
         ) );
         foreach( $level_one_clilds as $level_one_clild ):
             
@@ -28,6 +30,8 @@
             $level_one_clild_posts = get_posts(array(
                 'post_type' => 'lecture',
                 'numberposts' => -1,
+                'orderby'    => 'ID', 
+                'order'      => 'DESC',
                 'tax_query' => array(
                 array(
                   'taxonomy' => 'lecture_category',
@@ -51,6 +55,8 @@
               'taxonomy'    => 'lecture_category',
               'parent'      => $level_one_clild->term_id, 
               'depth'       => 1,
+              'orderby'    => 'ID', 
+              'order'      => 'DESC',
               'hide_empty'  => false
             ));
             foreach( $level_two_clilds as $level_two_clild ):
@@ -61,6 +67,8 @@
                 $level_two_clild_posts = get_posts(array(
                     'post_type' => 'lecture',
                     'numberposts' => -1,
+                    'orderby'    => 'ID', 
+                    'order'      => 'DESC',
                     'tax_query' => array(
                     array(
                       'taxonomy' => 'lecture_category',
@@ -84,6 +92,8 @@
                 'taxonomy'    => 'lecture_category',
                 'parent'      => $level_two_clild->term_id, 
                 'depth'       => 1,
+                'orderby'    => 'ID', 
+                'order'      => 'DESC',
                 'hide_empty'  => false
               ));
               foreach( $level_three_clilds as $level_three_clild ):
@@ -94,6 +104,8 @@
                 $level_three_clild_posts = get_posts(array(
                     'post_type' => 'lecture',
                     'numberposts' => -1,
+                    'orderby'    => 'ID', 
+                    'order'      => 'DESC',
                     'tax_query' => array(
                     array(
                       'taxonomy' => 'lecture_category',

@@ -13,7 +13,7 @@
 
 .level-one-clild-posts, .level-two-clild-posts, .level-three-clild-posts{
   margin: 5px;
-  border-right : 5px solid var(--bs-warning);
+  border : 2px 0 2px 0 solid var(--bs-warning);
 }
 
 /****** Levels Title ******/

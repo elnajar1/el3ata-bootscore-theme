@@ -9,24 +9,24 @@
   padding-bottom: 5px ;
   background: var(--bs-secondary);
   font-size: bold;
+  
+  border-right : 5px solid var(--bs-warning);
 }
 
 .level-one-clild-posts, .level-two-clild-posts, .level-three-clild-posts{
-  
+  border-right : 5px solid var(--bs-warning);
 }
 
 /****** Levels Title ******/
 .level-one-clild{
-  border-right : 10px solid var(--bs-warning);
+  
 } 
 
 .level-two-clild{
-  border-right : 10px solid var(--bs-warning);
   margin-right: 10px; 
 } 
 
 .level-three-clild {
-  border-right : 10px solid var(--bs-warning);
   margin-right: 20px; 
 } 
 
@@ -36,13 +36,13 @@ ul {
 }
 
 .level-one-clild-posts {
-  
+  margin-right: 10px; 
 } 
 
 .level-two-clild-posts {
-  
+  margin-right: 20px; 
 }
 
 .level-three-clild-posts {
-  
+  margin-right: 30px; 
 } 

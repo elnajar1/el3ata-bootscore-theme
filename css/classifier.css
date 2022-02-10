@@ -1,14 +1,12 @@
 .classifier-container{
-  background : red;
-}
-
-div{
-  background : green;
+  margin: 20px;
+  border-radius : 10px;
+  background: var(--bs-light);;
 }
 
 .level-one-clild, .level-two-clild, .level-three-clild{
   background: var(--bs-secondary);
-  color: red;
+  font-size: bold;
 }
 
 .level-one-clild-posts, .level-two-clild-posts, .level-three-clild-posts{
@@ -17,27 +15,26 @@ div{
 
 /****** Levels Title ******/
 .level-one-clild{
-  
-  
+  padding-right: 10px;
 } 
 
 .level-two-clild{
-  
+  padding-right: 20px;
 } 
 
-.level-three-clild{
-  
+.level-three-clild {
+  padding-right: 30px;
 } 
 
 /****** Posts ******/
-.level-one-clild-posts{
-  
+.level-one-clild-posts li {
+  list-style-type: none;
 } 
 
-.level-two-clild-posts {
-  
+.level-two-clild-posts li{
+  list-style-type: none;
 }
 
-.level-three-clild-posts{
-  
+.level-three-clild-posts li{
+  list-style-type: none;
 } 

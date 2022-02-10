@@ -6,7 +6,6 @@
 
 .level-one-clild, .level-two-clild, .level-three-clild{
   padding: 5px;
-  margin: 5px;
   font-weight: bold;
   border-radius: 5px 0 0 5px;
   border-right : 5px solid var(--bs-warning);
@@ -48,13 +47,13 @@
 }
 
 .level-one-clild-posts {
-  margin-right: 10px; 
+  margin-right: 30px; 
 } 
 
 .level-two-clild-posts {
-  margin-right: 20px; 
+  margin-right: 30px; 
 }
 
 .level-three-clild-posts {
-  margin-right: 30px; 
+  margin-right: 40px; 
 } 

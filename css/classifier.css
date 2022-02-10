@@ -37,8 +37,6 @@
 /****** Posts ******/
 .classifier-container ul {
   list-style-type: decimal;
-  margin: 0;
-  padding: 0;
 }
 
 .classifier-container li {

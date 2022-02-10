@@ -38,6 +38,13 @@ ul {
   list-style-type: none;
 }
 
+li {
+  padding: 5px;
+  margin: 5px;
+  border: 0.5px solid gray;
+  border-radius: 5px 0 0 5px;
+}
+
 .level-one-clild-posts {
   argin-right: 10px; 
 } 

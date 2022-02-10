@@ -245,7 +245,7 @@ add_filter('widget_text', 'do_shortcode');
 function bootscore_scripts() {
 
   //page-classifier.php custom css
-  wp_enqueue_style( 'classifier-css', get_template_directory() . '/css/classifier.css', false ); 
+  wp_enqueue_style( 'classifier-css', get_template_directory_uri() . '/css/classifier.css', false ); 
 
   // Get modification time. Enqueue files with modification date to prevent browser from loading cached scripts and styles when file content changes.
   $modificated_styleCss = date('YmdHi', filemtime(get_stylesheet_directory() . '/style.css'));

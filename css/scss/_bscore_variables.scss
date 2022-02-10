@@ -70,7 +70,7 @@ $form-check-input-border-radius:    .25em !default;
 
 // Links
 // Style anchor elements.
-$link-decoration:       underline !default;
+$link-decoration:       none !default;
 $link-hover-decoration: null !default;
 
 // Fonts
@@ -82,3 +82,6 @@ $headings-font-weight:  500 !default;
 $display-font-weight:   300 !default;
 // scss-docs-end font-variables
 
+a {
+  color: $secondary !default;
+}

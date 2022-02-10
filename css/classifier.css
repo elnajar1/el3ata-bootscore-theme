@@ -5,8 +5,10 @@
 }
 
 .level-one-clild, .level-two-clild, .level-three-clild{
-  margin: 0;
+  padding: 5px;
+  margin: 5px;
   font-weight: bold;
+  border-radius: 5px 0 0 5px;
   border-right : 5px solid var(--bs-warning);
 }
 

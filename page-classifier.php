@@ -6,7 +6,7 @@
   <div id="primary" class="content-area">
     
     <div class = "row">
-      <div class = "col main-container">
+      <div class = "col classifier-container">
       
         <?php
         
@@ -24,7 +24,7 @@
         ) );
         foreach( $level_one_clilds as $level_one_clild ):
             
-            echo "<div class ='level_one_clild' ><p>" . $level_one_clild->name . "</p></div>" ;
+            echo "<div class ='level-one-clild' ><p>" . $level_one_clild->name . "</p></div>" ;
             
             // #level_one_clild_posts#
             $level_one_clild_posts = get_posts(array(
@@ -44,7 +44,7 @@
               
               echo "<ul>";
               foreach ( $level_one_clild_posts as $post ) : setup_postdata( $post ); ?>
-                <li class="level_one_clild_posts"><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
+                <li class="level-one-clild-posts"><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
               <?php 
               endforeach;  
               echo "</ul>";
@@ -61,7 +61,7 @@
             ));
             foreach( $level_two_clilds as $level_two_clild ):
               
-              echo "<div class ='level_two_clild' ><p>" . $level_two_clild->name . "</p></div>" ;
+              echo "<div class ='level-two-clild' ><p>" . $level_two_clild->name . "</p></div>" ;
             
                 // ##level_one_clild_posts##
                 $level_two_clild_posts = get_posts(array(
@@ -81,7 +81,7 @@
                   
                   echo "<ul>";
                   foreach ( $level_two_clild_posts as $post ) : setup_postdata( $post ); ?>
-                    <li class = "level_two_clild_posts" ><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
+                    <li class = "level-two-clild-posts" ><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
                   <?php 
                   endforeach;  
                   echo "</ul>";
@@ -98,7 +98,7 @@
               ));
               foreach( $level_three_clilds as $level_three_clild ):
                 
-                echo "<div class ='level_three_clild' ><p>" . $level_three_clild->name . "</p></div>" ;
+                echo "<div class ='level-three-clild' ><p>" . $level_three_clild->name . "</p></div>" ;
             
                 // ###level_three_clild_posts###
                 $level_three_clild_posts = get_posts(array(
@@ -118,7 +118,7 @@
                   
                   echo "<ul>";
                   foreach ( $level_three_clild_posts as $post ) : setup_postdata( $post ); ?>
-                    <li class ="level_three_clild_posts"><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
+                    <li class ="level-three-clild-posts"><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
                   <?php 
                   endforeach;  
                   echo "</ul>";

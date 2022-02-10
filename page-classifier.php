@@ -42,9 +42,9 @@
                )
               ));
               
-              echo "<ul>";
+              echo "<ul  class='level-one-clild-posts' >";
               foreach ( $level_one_clild_posts as $post ) : setup_postdata( $post ); ?>
-                <li class="level-one-clild-posts"><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
+                <li><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
               <?php 
               endforeach;  
               echo "</ul>";
@@ -79,9 +79,9 @@
                    )
                   ));
                   
-                  echo "<ul>";
+                  echo "<ul class = 'level-two-clild-posts'>";
                   foreach ( $level_two_clild_posts as $post ) : setup_postdata( $post ); ?>
-                    <li class = "level-two-clild-posts" ><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
+                    <li><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
                   <?php 
                   endforeach;  
                   echo "</ul>";
@@ -116,9 +116,9 @@
                    )
                   ));
                   
-                  echo "<ul>";
+                  echo "<ul class ='level-three-clild-posts'>";
                   foreach ( $level_three_clild_posts as $post ) : setup_postdata( $post ); ?>
-                    <li class ="level-three-clild-posts"><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
+                    <li><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></li>
                   <?php 
                   endforeach;  
                   echo "</ul>";

@@ -15,3 +15,70 @@
   https://github.com/bootscore/bootcommerce-child/archive/refs/heads/main.zip
 
 -----------------------------------------------------------------------------*/
+// Color system
+// scss-docs-start gray-color-variables
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start color-variables
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #C10015 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #F2C037 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+// scss-docs-end color-variables
+
+// scss-docs-start theme-color-variables
+$primary:   #000000 !default;
+$secondary: #00A5A4 !default;
+$success:   $green  !default;
+$info:      $cyan   !default;
+$warning:   $yellow !default;
+$danger:    $red    !default;
+$light:     #F7F7F8 !default;
+$dark:      #000000 !default;
+// scss-docs-end theme-color-variables
+
+// Body
+// Settings for the `<body>` element.
+$body-bg:       $white !default;
+$body-color:    $gray-900 !default;
+
+// Border radius
+// scss-docs-start border-radius-variables
+$border-radius:                     .25rem !default;
+$border-radius-sm:                  .2rem !default;
+$border-radius-lg:                  .3rem !default;
+// Checkboxes
+$form-check-input-border-radius:    .25em !default;
+// scss-docs-end border-radius-variables
+
+// Links
+// Style anchor elements.
+$link-decoration:       underline !default;
+$link-hover-decoration: null !default;
+
+// Fonts
+// scss-docs-start font-variables
+$font-family-sans-serif:    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:     SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$headings-font-weight:  500 !default;
+$display-font-weight:   300 !default;
+// scss-docs-end font-variables
+

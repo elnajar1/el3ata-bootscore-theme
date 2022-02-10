@@ -6,7 +6,6 @@
 
 .level-one-clild, .level-two-clild, .level-three-clild{
   margin: 0;
-  background: var(--bs-secondary);
   font-size: bold;
   
   border-right : 5px solid var(--bs-warning);
@@ -19,15 +18,17 @@
 
 /****** Levels Title ******/
 .level-one-clild{
-  
+  background: var(--bs-black);
 } 
 
 .level-two-clild{
-  margin-right: 10px; 
+  margin-right: 30px; 
+  background: var(--bs-gray-700);
 } 
 
 .level-three-clild {
-  margin-right: 20px; 
+  margin-right: 60px; 
+  background: var(--bs-gray-400);
 } 
 
 /****** Posts ******/

@@ -36,6 +36,7 @@
 
 /****** Posts ******/
 .classifier-container ul {
+  list-style-position:inside
   list-style-type: decimal;
 }
 

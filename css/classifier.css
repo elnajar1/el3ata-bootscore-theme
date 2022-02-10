@@ -17,21 +17,17 @@
 
 /****** Levels Title ******/
 .level-one-clild{
-  padding-right: 10px;
   border-right : 10px solid var(--bs-warning);
-  
 } 
 
 .level-two-clild{
-  padding-right: 20px;
-  border-right : 20px solid var(--bs-warning);
- 
+  border-right : 10px solid var(--bs-warning);
+  margin-right: 10px; 
 } 
 
 .level-three-clild {
-  padding-right: 30px;
-  border-right : 30px solid var(--bs-warning);
-
+  border-right : 10px solid var(--bs-warning);
+  margin-right: 20px; 
 } 
 
 /****** Posts ******/

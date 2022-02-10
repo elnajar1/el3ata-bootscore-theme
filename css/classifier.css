@@ -1,0 +1,39 @@
+.classifier-container{
+  
+}
+
+.level-one-clild, .level-two-clild, .level-three-clild{
+  background: var(--bs-primary);
+  color: #eee;
+}
+
+.level-one-clild-posts, .level-two-clild-posts, .level-three-clild-posts{
+  
+}
+
+/****** Levels Title ******/
+.level-one-clild{
+  
+  
+} 
+
+.level-two-clild{
+  
+} 
+
+.level-three-clild{
+  
+} 
+
+/****** Posts ******/
+.level-one-clild-posts{
+  
+} 
+
+.level-two-clild-posts {
+  
+}
+
+.level-three-clild-posts{
+  
+} 

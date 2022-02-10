@@ -5,6 +5,8 @@
 }
 
 .level-one-clild, .level-two-clild, .level-three-clild{
+  padding-top: 5px ;
+  padding-bottom: 5px ;
   background: var(--bs-secondary);
   font-size: bold;
 }
@@ -16,25 +18,35 @@
 /****** Levels Title ******/
 .level-one-clild{
   padding-right: 10px;
+  border-right : 10px solid var(--bs-warning);
+  
 } 
 
 .level-two-clild{
   padding-right: 20px;
+  border-right : 20px solid var(--bs-warning);
+ 
 } 
 
 .level-three-clild {
   padding-right: 30px;
+  border-right : 30px solid var(--bs-warning);
+
 } 
 
 /****** Posts ******/
-.level-one-clild-posts li {
-  list-style-type: none;
-} 
-
-.level-two-clild-posts li{
+ul {
   list-style-type: none;
 }
 
-.level-three-clild-posts li{
-  list-style-type: none;
+.level-one-clild-posts {
+  
+} 
+
+.level-two-clild-posts {
+  
+}
+
+.level-three-clild-posts {
+  
 } 

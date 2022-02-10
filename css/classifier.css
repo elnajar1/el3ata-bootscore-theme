@@ -3,8 +3,8 @@
 }
 
 .level-one-clild, .level-two-clild, .level-three-clild{
-  background: var(--bs-primary);
-  color: #eee;
+  background: var(--bs-secondary);
+  color: red;
 }
 
 .level-one-clild-posts, .level-two-clild-posts, .level-three-clild-posts{

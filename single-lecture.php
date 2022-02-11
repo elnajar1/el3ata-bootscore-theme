@@ -10,18 +10,43 @@
         <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
           <div class="py-2">
             
-            <h1 class="fw-bold single-post-title" >
+            <h1 class="fw-bold bg-secondary p-2 m-2 rounded" >
               <?php the_title(); ?> 
             </h1>
             
-            <div class="">
+            <div class="bg-light p-2 m-2 rounded">
               <?php the_content(); ?> 
             </div>
             
-            <div class="">
-              <pre>
-                <?php var_dump(get_fields()); ?>
-             </pre>
+            <div class="bg-light p-2 m-2 rounded">
+              <?php 
+                if ( get_fields(['handout_files']['link'] ) ) {
+                  echo get_fields(['handout_files']['link']) ;
+                }
+              ?> 
+            </div>
+            
+            <div class="bg-light p-2 m-2 rounded">
+              <?php
+              
+                if( stripos(get_fields('url'),'youtu') === false){
+                  //not YouTube video ?>
+                  <p>
+                    للاستاع للمحاضرة ،  هذا هو
+                    <a href ="<?php echo get_fields('url') ?>">
+                       رابط محاضرة 
+                       <?php the_title(); ?> 
+                       كمقطع صوتي علي تلجرام
+                    </a>
+                  </p>
+                 
+                 <?php
+                } else {
+                  //is youtube ?>
+                  <iframe width="560" height="315" src="<?php echo get_fields('url') ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <?php
+                }
+              ?>
             </div>
             
           </div>
@@ -30,23 +55,7 @@
       </div>
     </div>
     
-    <div class = "row bg-light py-5">
-      <div class = "col text-center">
-        
-        <?php 
-          if ( get_next_post_link('%link','') ) :
-            //get next post in the same category
-            echo  next_post_link('%link', '<button class ="btn btn-light bg-white text-primary border"> التالي :  %title </button>') ;
-          else:
-            //get previous post in the same category
-            echo  previous_post_link('%link', '<button class ="btn btn-light bg-white text-primary border"> السابق : %title </button>' ) ;
-          endif;
-          
-        ?>
-      </div>
-    </div> 
-    
-    <div class = "row">
+    <div class = "d-none row">
       <div class = "col border-tob">
         <?php comments_template(); ?>
       </div>

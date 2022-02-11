@@ -40,7 +40,7 @@
                 }
               ?> 
               
-              <a href = "#video" class = "btn btn-sm btn-outline-warning" >
+              <a href = "#video" class = "btn btn-sm btn-outline-secondary" >
                 <i class="text-danger bi bi-youtube"></i>
                 مشاهدة المحاضرة
               </a>

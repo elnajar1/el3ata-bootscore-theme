@@ -4,7 +4,7 @@
   $details = get_fields();
 ?>
 
-<div id="content" class="site-content container py-5 mt-4">
+<div id="content" class="site-content container-fluid ">
   <div id="primary" class="content-area">
     
     <div class = "row">
@@ -13,7 +13,7 @@
         <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
           <div class="">
             
-            <h1 class="fw-bold bg-secondary text-white py-4 m-2 rounded" >
+            <h1 class="fw-bold bg-secondary text-white py-4 px-2 my-2 rounded" >
               <?php the_title(); ?> 
             </h1>
             

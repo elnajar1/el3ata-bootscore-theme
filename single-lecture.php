@@ -68,14 +68,13 @@
                  <?php
                 } else {
                   //is youtube
-                  preg_match(
-                    '/[\\?\\&]v=([^\\?\\&]+)/',
+                  preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#",
                     $details['url'] ,
                     $youtube_video_id
                   );
                   
                   ?>
-                  <iframe width="560" height="315" src="http://www.youtube.com/v/<?php var_dump($details['url'])  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="http://www.youtube.com/v/<?php $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <?php
                 }
               ?>

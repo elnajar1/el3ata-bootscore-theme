@@ -18,15 +18,15 @@
             </h1>
             
             <div class="bg-light p-2 m-2 rounded">
-              <?php the_content(); ?> 
-            </div>
-            
-            <div class="bg-light p-2 m-2 rounded">
               <?php 
-                if ( get_fields(['handout_files']['link'] ) ) {
-                  echo get_fields(['handout_files']['link']) ;
+                if ( $details['handout_files']['link'] ) {
+                  echo $details['handout_files']['link'];
                 }
               ?> 
+            </div> 
+            
+            <div class="bg-light p-2 m-2 rounded">
+              <?php the_content(); ?> 
             </div>
             
             <div class="bg-light p-2 m-2 rounded">

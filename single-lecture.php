@@ -13,11 +13,11 @@
         <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
           <div class="">
             
-            <h1 class="fw-bold bg-secondary p-2 m-2 rounded" >
+            <h1 class="fw-bold bg-secondary py-4 my-2 rounded" >
               <?php the_title(); ?> 
             </h1>
             
-            <div class="bg-light p-2 m-2 rounded">
+            <div class="bg-light py-2 my-2 rounded">
               <?php 
                 if ( $details['handout_files']['link'] ) {
                   echo $details['handout_files']['link'];
@@ -25,11 +25,11 @@
               ?> 
             </div> 
             
-            <div class="bg-light p-2 m-2 rounded">
+            <div class="bg-light py-2 my-2 rounded">
               <?php the_content(); ?> 
             </div>
             
-            <div class="bg-light p-2 m-2 rounded">
+            <div class="bg-light py-2 my-2 rounded">
               <?php
               
                 if( stripos($details['url'],'youtu') === false){

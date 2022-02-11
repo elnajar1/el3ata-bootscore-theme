@@ -4,7 +4,7 @@
   $details = get_fields();
 ?>
 
-<div id="content" class="site-content container-fluid ">
+<div id="content" class="site-content container">
   <div id="primary" class="content-area">
     
     <div class = "row">
@@ -45,8 +45,15 @@
                  
                  <?php
                 } else {
-                  //is youtube ?>
-                  <iframe width="560" height="315" src="<?php echo $details['url'] ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  //is youtube
+                  preg_match(
+                    '/[\\?\\&]v=([^\\?\\&]+)/',
+                    $details['url'] ,
+                    $youtube_video_id
+                  );
+                  
+                  ?>
+                  <iframe width="560" height="315" src="http://www.youtube.com/v/<?php echo $youtube_video_id  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <?php
                 }
               ?>

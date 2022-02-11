@@ -19,21 +19,39 @@
             
             <div class="bg-light py-2 my-2 rounded">
               <?php 
-                if ( $details['handout_files']['link'] ) { ?>
-                  <a href = "<?php echo $details['handout_files']['link'] ?>" class = "btn btn-sm btn-secondary" >
+                if ( $details['handout_files']['url'] ) { ?>
+                  <a href = "<?php echo $details['handout_files']['url'] ?>" class = "btn btn-sm btn-outline-secondary" >
                     <i class="bi bi-file-earmark-pdf"></i>
-                    تنزيل التفريغ
+                    تحميل التفريغ
+                   <i class="bi bi-download"></i>
                   </a>
                 <?php
                 }
               ?> 
+              
+              <?php 
+                if ( $details['summarization_files']['url'] ) { ?>
+                  <a href = "<?php echo $details['summarization_files']['url'] ?>" class = "btn btn-sm btn-outline-secondary" >
+                    <i class="bi bi-file-earmark-text"></i> 
+                    تحميل التلخيص
+                    <i class="bi bi-download"></i>
+                  </a>
+                <?php
+                }
+              ?> 
+              
+              <a href = "#video" class = "btn btn-sm btn-outline-warning" >
+                <i class="text-danger bi bi-youtube"></i>
+                مشاهدة المحاضرة
+              </a>
+              
             </div> 
             
             <div class="bg-light py-2 my-2 rounded">
               <?php the_content(); ?> 
             </div>
             
-            <div class="bg-light py-2 my-2 rounded">
+            <div id ="video" class="bg-light py-2 my-2 rounded">
               <?php
               
                 if( stripos($details['url'],'youtu') === false){

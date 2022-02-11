@@ -8,7 +8,7 @@
       <div class = "col">
         
         <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
-          <div class="py-2">
+          <div class="">
             
             <h1 class="fw-bold bg-secondary p-2 m-2 rounded" >
               <?php the_title(); ?> 
@@ -29,13 +29,13 @@
             <div class="bg-light p-2 m-2 rounded">
               <?php
               
-                if( stripos(get_fields('url'),'youtu') === false){
+                if( stripos(get_fields(['url']),'youtu') === false){
                   //not YouTube video ?>
                   <p>
                     للاستاع للمحاضرة ،  هذا هو
-                    <a href ="<?php echo get_fields('url') ?>">
+                    <a href ="<?php echo get_fields(['url']) ?>">
                        رابط محاضرة 
-                       <?php the_title(); ?> 
+                       ( <?php the_title(); ?> ) 
                        كمقطع صوتي علي تلجرام
                     </a>
                   </p>
@@ -43,7 +43,7 @@
                  <?php
                 } else {
                   //is youtube ?>
-                  <iframe width="560" height="315" src="<?php echo get_fields('url') ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="<?php echo get_fields(['url']) ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <?php
                 }
               ?>

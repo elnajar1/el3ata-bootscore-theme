@@ -19,8 +19,12 @@
             
             <div class="bg-light py-2 my-2 rounded">
               <?php 
-                if ( $details['handout_files']['link'] ) {
-                  echo $details['handout_files']['link'];
+                if ( $details['handout_files']['link'] ) { ?>
+                  <a href = "<?php echo $details['handout_files']['link'] ?>" class = "btn btn-sm btn-secondary" >
+                    <i class="bi bi-file-earmark-pdf"></i>
+                    تنزيل التفريغ
+                  </a>
+                <?php
                 }
               ?> 
             </div> 

@@ -1,5 +1,8 @@
 <?php acf_form_head(); ?>
-<?php get_header(); ?>
+<?php 
+  get_header(); 
+  $details = get_fields();
+?>
 
 <div id="content" class="site-content container py-5 mt-4">
   <div id="primary" class="content-area">
@@ -29,11 +32,11 @@
             <div class="bg-light p-2 m-2 rounded">
               <?php
               
-                if( stripos(get_fields(['url']),'youtu') === false){
+                if( stripos($details['url'],'youtu') === false){
                   //not YouTube video ?>
                   <p>
                     للاستاع للمحاضرة ،  هذا هو
-                    <a href ="<?php echo get_fields(['url']) ?>">
+                    <a href ="<?php echo $details['url'] ?>">
                        رابط محاضرة 
                        ( <?php the_title(); ?> ) 
                        كمقطع صوتي علي تلجرام
@@ -43,7 +46,7 @@
                  <?php
                 } else {
                   //is youtube ?>
-                  <iframe width="560" height="315" src="<?php echo get_fields(['url']) ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="<?php echo $details['url'] ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <?php
                 }
               ?>

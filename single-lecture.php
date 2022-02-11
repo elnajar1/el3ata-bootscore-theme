@@ -21,9 +21,9 @@
               <?php 
                 if ( $details['handout_files']['url'] ) { ?>
                   <a href = "<?php echo $details['handout_files']['url'] ?>" class = "btn btn-sm btn-outline-secondary" >
+                    <i class="bi bi-download"></i> 
                     <i class="bi bi-file-earmark-pdf"></i>
-                    تحميل التفريغ
-                   <i class="bi bi-download"></i>
+                    التفريغ
                   </a>
                 <?php
                 }
@@ -32,9 +32,9 @@
               <?php 
                 if ( $details['summarization_files']['url'] ) { ?>
                   <a href = "<?php echo $details['summarization_files']['url'] ?>" class = "btn btn-sm btn-outline-secondary" >
-                    <i class="bi bi-file-earmark-text"></i> 
-                    تحميل التلخيص
                     <i class="bi bi-download"></i>
+                    <i class="bi bi-file-earmark-text"></i> 
+                     التلخيص
                   </a>
                 <?php
                 }
@@ -42,7 +42,7 @@
               
               <a href = "#video" class = "btn btn-sm btn-outline-secondary" >
                 <i class="text-danger bi bi-youtube"></i>
-                مشاهدة المحاضرة
+                مشاهدة 
               </a>
               
             </div> 
@@ -68,14 +68,13 @@
                  <?php
                 } else {
                   //is youtube
-                  preg_match(
-                    '/[\\?\\&]v=([^\\?\\&]+)/',
+                  preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#",
                     $details['url'] ,
                     $youtube_video_id
                   );
                   
                   ?>
-                  <iframe width="560" height="315" src="http://www.youtube.com/v/<?php echo $youtube_video_id  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class = "w-100 h-auto" width="560" height="315" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <?php
                 }
               ?>

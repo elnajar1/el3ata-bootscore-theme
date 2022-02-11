@@ -13,7 +13,7 @@
         <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
           <div class="">
             
-            <h1 class="fw-bold bg-secondary py-4 my-2 rounded" >
+            <h1 class="fw-bold bg-secondary text-white py-4 m-2 rounded" >
               <?php the_title(); ?> 
             </h1>
             

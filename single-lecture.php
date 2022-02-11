@@ -42,7 +42,7 @@
               
               <a href = "#video" class = "btn btn-sm btn-outline-secondary" >
                 <i class="text-danger bi bi-youtube"></i>
-                مشاهدة المحاضرة
+                مشاهدة 
               </a>
               
             </div> 
@@ -75,7 +75,7 @@
                   );
                   
                   ?>
-                  <iframe width="560" height="315" src="http://www.youtube.com/v/<?php var_dump($youtube_video_id)  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="http://www.youtube.com/v/<?php var_dump($details['url'])  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <?php
                 }
               ?>

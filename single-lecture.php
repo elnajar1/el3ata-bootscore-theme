@@ -23,7 +23,7 @@
                   <a href = "<?php echo $details['handout_files']['url'] ?>" class = "btn btn-sm btn-outline-secondary" >
                     <i class="bi bi-download"></i> 
                     <i class="bi bi-file-earmark-pdf"></i>
-                    تحميل التفريغ
+                    التفريغ
                   </a>
                 <?php
                 }
@@ -34,7 +34,7 @@
                   <a href = "<?php echo $details['summarization_files']['url'] ?>" class = "btn btn-sm btn-outline-secondary" >
                     <i class="bi bi-download"></i>
                     <i class="bi bi-file-earmark-text"></i> 
-                    تحميل التلخيص
+                     التلخيص
                   </a>
                 <?php
                 }
@@ -74,7 +74,7 @@
                   );
                   
                   ?>
-                  <iframe class = "w-auto h-auto" width="560" height="315" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class = "w-100 h-auto" width="560" height="315" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <?php
                 }
               ?>

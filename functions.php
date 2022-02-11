@@ -244,9 +244,6 @@ add_filter('widget_text', 'do_shortcode');
 //Enqueue scripts and styles
 function bootscore_scripts() {
 
-  //page-classifier.php custom css
-  wp_enqueue_style( 'classifier-css', get_template_directory_uri() . '/css/classifier.css', false ); 
-
   // Get modification time. Enqueue files with modification date to prevent browser from loading cached scripts and styles when file content changes.
   $modificated_styleCss = date('YmdHi', filemtime(get_stylesheet_directory() . '/style.css'));
   if (file_exists(get_template_directory() . '/css/lib/bootstrap.min.css')) {
@@ -265,7 +262,13 @@ function bootscore_scripts() {
   require_once 'inc/scss-compiler.php';
   bootscore_compile_scss();
   wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/lib/bootstrap.min.css', array(), $modificated_bootscoreCss);
-
+  
+  //page-classifier.php custom css
+  wp_enqueue_style( 'classifier-css', get_template_directory_uri() . '/css/classifier.css', false ); 
+  
+ //single-lecture.php custom css
+  wp_enqueue_style( 'lecture-css', get_template_directory_uri() . '/css/lecture.css', false ); 
+ 
   // Fontawesome
   wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/lib/fontawesome.min.css', array(), $modificated_fontawesomeCss);
 

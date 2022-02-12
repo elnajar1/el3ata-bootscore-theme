@@ -11,7 +11,7 @@
       <div class = "col">
         
         <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
-          <div class="">
+          <main>
             
             <div class = "bg-light p-2">m
            <?php
@@ -27,9 +27,11 @@ echo $term->name . ">";
               ?>               
            </div>
             
-            <h1 class="fw-bold bg-secondary text-white py-4 px-2 my-2 rounded" >
-              <?php the_title(); ?> 
-            </h1>
+            <header>
+              <h1 class="fw-bold bg-secondary text-white py-4 px-2 my-2 rounded" >
+                <?php the_title(); ?> 
+              </h1>
+            </header> 
             
             <div class="bg-light py-2 my-2 rounded">
               <?php 
@@ -116,7 +118,7 @@ echo $term->name . ">";
               ?>
             </div>
             
-          </div>
+          </main>
         <?php endwhile; endif; ?>
     
       </div>

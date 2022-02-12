@@ -33,7 +33,7 @@
                 
                     $term_ids = implode( ',' , $post_terms );
                 
-                    $terms = wp_list_categories( array(
+                    $terms = get_terms( array(
                         'title_li' => '',
                         'style'    => 'none',
                         'echo'     => false,
@@ -129,7 +129,7 @@
                   
                   ?>
                   <div class ="m-auto">
-                    <iframe class="d-block" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="text-center" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                   <?php
                 }

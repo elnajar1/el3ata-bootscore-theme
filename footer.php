@@ -36,12 +36,12 @@
         </li>
       </ul>
       
-      <div class = "py-4 text-center text-white">
+      <div class = "py-4 text-center">
         <a class = "p-3" href ="https://github.com/moud449/el3ata-bootscore-theme">
-          <i style="font-size: 2rem;" class="bi bi-github"></i>
+          <i style="font-size: 2rem;" class="bi bi-github  text-white"></i>
         </a>
         <a class = "p-3" href ="https://t.me/BinaaManhaji">
-          <i style="font-size: 2rem;" class="bi bi-telegram"></i> 
+          <i style="font-size: 2rem;" class="bi bi-telegram  text-white "></i> 
         </a>
       </div>
       
@@ -116,7 +116,7 @@
     </div>
   </div>
 
-  <div class="bootscore-info bg-light text-muted border-top py-2 text-center">
+  <div class="bootscore-info text-muted border-top py-2 text-center">
     <div class="container">
       <small> 
         <?php bloginfo('name'); ?>

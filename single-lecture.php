@@ -14,56 +14,17 @@
           <div class="">
             
             <div class = "bg-light p-2">m
-              
-              <?php
-$parent_terms = get_terms(
-    'lecture_category',
-    array(
-        'parent' => 13, 
-    )
-);
+           <?php
+            $terms = get_the_terms( $post->ID , 'taxonomyname' );
 
-foreach ( $parent_terms as $parent_term ) {
+foreach ( $terms as $term ) {
 
-    $child_terms = get_terms(
-        'lecture_category', 
-        array(
-            'child_of' => $parent_term->term_id,
-        )
-    );
-    
-    foreach ( $child_terms as $child_term ) {
-    
-        $args = array(
-            'post_type' => 'lecture',
-            'tax_query' => array(
-                array(
-                    'taxonomy'      => 'lecture_category',
-                    'field'         => 'slug',
-                    'terms'         => $child_term->slug,
-                ),
-            ),
-        );
-    
-        $loop = new WP_Query($args);
-        
-        if ( $loop->have_posts() ) :
-        
-            while ( $loop->have_posts() ) :
-                $loop->the_post();
-            
-                echo '<h3>' . $parent_term->name . '</h3>';
-                echo '<h4>' . $parent_term->name . '</h4>';
-                echo get_the_title();
+echo $term->name . ">";
 
-            endwhile;
-            wp_reset_postdata();
-        endif;
-    }
 }
 
- 
-?>               
+?>
+              ?>               
            </div>
             
             <h1 class="fw-bold bg-secondary text-white py-4 px-2 my-2 rounded" >

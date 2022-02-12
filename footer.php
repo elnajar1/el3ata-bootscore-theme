@@ -24,6 +24,11 @@
       
       <ul>
         <li>
+          <a href ="/">
+            مذكرة البناء المنهجي 
+          </a>
+        </li>
+        <li>
           <a href = "http://el3ata.com/%d9%83%d9%8a%d9%81%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%b3%d8%a7%d9%87%d9%85%d8%a9-%d8%a8%d8%a7%d9%84%d9%86%d8%b4%d8%b1-%d9%88-%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b1-%d9%81%d9%8a-%d8%b9%d8%b7%d8%a7/">
             المشاركة بالنشر و التعديل
           </a>
@@ -47,91 +52,24 @@
       
     </div>
     
-    <div class="container">
-      
-    <div class="container">
-
-      <!-- Top Footer Widget -->
-      <?php if (is_active_sidebar('top-footer')) : ?>
-        <div>
-          <?php dynamic_sidebar('top footer'); ?>
-        </div>
-      <?php endif; ?>
-
-      <div class="row">
-
-        <!-- Footer 1 Widget -->
-        <div class="col-md-6 col-lg-3">
-          <?php if (is_active_sidebar('footer-1')) : ?>
-            <div>
-              <?php dynamic_sidebar('footer-1'); ?>
-            </div>
-          <?php endif; ?>
-        </div>
-
-        <!-- Footer 2 Widget -->
-        <div class="col-md-6 col-lg-3">
-          <?php if (is_active_sidebar('footer-2')) : ?>
-            <div>
-              <?php dynamic_sidebar('footer-2'); ?>
-            </div>
-          <?php endif; ?>
-        </div>
-
-        <!-- Footer 3 Widget -->
-        <div class="col-md-6 col-lg-3">
-          <?php if (is_active_sidebar('footer-3')) : ?>
-            <div>
-              <?php dynamic_sidebar('footer-3'); ?>
-            </div>
-          <?php endif; ?>
-        </div>
-
-        <!-- Footer 4 Widget -->
-        <div class="col-md-6 col-lg-3">
-          <?php if (is_active_sidebar('footer-4')) : ?>
-            <div>
-              <?php dynamic_sidebar('footer-4'); ?>
-            </div>
-          <?php endif; ?>
-        </div>
-        <!-- Footer Widgets End -->
-
+    <div class="bootscore-info text-muted py-2 text-center">
+      <div class="container">
+        <small> 
+          <?php bloginfo('name'); ?>
+          - 
+          علم يُنتفع به 
+        </small>
+        <br>
+        <small> WordPress - El3ata Bootscore Theme </small>
       </div>
-
-      <!-- Bootstrap 5 Nav Walker Footer Menu -->
-      <?php
-      wp_nav_menu(array(
-        'theme_location' => 'footer-menu',
-        'container' => false,
-        'menu_class' => '',
-        'fallback_cb' => '__return_false',
-        'items_wrap' => '<ul id="footer-menu" class="nav %2$s">%3$s</ul>',
-        'depth' => 1,
-        'walker' => new bootstrap_5_wp_nav_menu_walker()
-      ));
-      ?>
-      <!-- Bootstrap 5 Nav Walker Footer Menu End -->
-
     </div>
+    
   </div>
-
-  <div class="bootscore-info text-muted py-2 text-center">
-    <div class="container">
-      <small> 
-        <?php bloginfo('name'); ?>
-        - 
-        علم يُنتفع به 
-      </small>
-      <br>
-      <small> WordPress - El3ata Bootscore Theme </small>
-    </div>
-  </div>
-
+  
 </footer>
 
 <div class="top-button position-fixed zi-1020">
-  <a href="#to-top" class="btn btn-primary shadow"><i class="fas fa-chevron-up"></i><span class="visually-hidden-focusable">To top</span></a>
+  <a href="#to-top" class="btn btn-primary shadow"><i class="bi bi-arrow-up-short"></i><span class="visually-hidden-focusable">To top</span></a>
 </div>
 
 </div><!-- #page -->

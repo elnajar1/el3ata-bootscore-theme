@@ -15,7 +15,14 @@
             
             <div class = "bg-light p-2">
               <?php 
-                the_category( ' > ', 'multiple', $post->ID); 
+                $cats = get_the_category(); //retrieve cats for post
+
+foreach ($cats as $cat) { //go thru to find child one - means cat which has specified parent id
+    if ($cat->category_parent != 0) {
+        $child = $cat->term_taxonomy_id;
+    }
+}
+echo get_category_parents( $child, TRUE, ' > ' );
               ?>
            </div>
             
@@ -99,7 +106,7 @@
                   
                   ?>
                   <div class ="p-2">
-                    <iframe style ="width: 100vw;height: calc(100vw/1.77); "   src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe style ="width: 100vw;height: calc(100vw/1.77); " class ="rounded" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                   <?php
                 }

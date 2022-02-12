@@ -72,7 +72,7 @@
               <div id = "thumbnail" style = "display : none">
                 <?php the_post_thumbnail('', ['class' => 'p-1' ] ) ?>
               </div>
-              <article>
+              <article class ="post-content">
                 <?php the_content(); ?>
               <article/>
             </div>

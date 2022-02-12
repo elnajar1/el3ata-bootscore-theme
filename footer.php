@@ -18,7 +18,7 @@
     
     <div class="container">
       
-      <p class "fw-bolder text-white border-bottom" >
+      <p class "fw-bolder text-light border-bottom border-light" >
         روابط
       </p>
       
@@ -36,12 +36,12 @@
         </li>
       </ul>
       
-      <div class = "text-center text-white">
-        <a class = "m-2" href ="https://github.com/moud449/el3ata-bootscore-theme">
-          <i class="bi bi-github"></i>
+      <div class = "py-4 text-center text-white">
+        <a class = "p-3" href ="https://github.com/moud449/el3ata-bootscore-theme">
+          <i style="font-size: 2rem;" class="bi bi-github"></i>
         </a>
-        <a class = "m-2" href ="https://t.me/BinaaManhaji">
-          <i class="bi bi-telegram"></i> 
+        <a class = "p-3" href ="https://t.me/BinaaManhaji">
+          <i style="font-size: 2rem;" class="bi bi-telegram"></i> 
         </a>
       </div>
       
@@ -116,7 +116,7 @@
     </div>
   </div>
 
-  <div class="bootscore-info bg-dark text-light border-top py-2 text-center">
+  <div class="bootscore-info bg-dark text-muted border-top py-2 text-center">
     <div class="container">
       <small> وعلم يُنتفع به - <?php bloginfo('name'); ?></small>
       <br>

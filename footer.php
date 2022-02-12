@@ -18,9 +18,9 @@
     
     <div class="container">
       
-      <p class = "fw-bolder text-white border-bottom border-light" >
+      <h5 class = "fw-bolder text-light " >
         روابط
-      </p>
+      </h5>
       
       <ul>
         <li>
@@ -116,7 +116,7 @@
     </div>
   </div>
 
-  <div class="bootscore-info text-muted border-top py-2 text-center">
+  <div class="bootscore-info text-muted py-2 text-center">
     <div class="container">
       <small> 
         <?php bloginfo('name'); ?>

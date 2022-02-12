@@ -15,15 +15,26 @@
             
             <div class = "bg-light p-2">
               <?php 
-                $cats = get_the_category(); //retrieve cats for post
 
-foreach ($cats as $cat) { //go thru to find child one - means cat which has specified parent id
-    if ($cat->category_parent != 0) {
-        $child = $cat->term_taxonomy_id;
-    }
+$args = array(
+
+    'hide_empty'         => 0,
+    'echo'               => 1,
+    'taxonomy'           => 'category',
+    'hierarchical'  =>1,
+    'show_count' => 1,
+
+);
+
+function add_class_wp_list_categories($wp_list_categories) {
+        $pattern = '/<li class="/is';
+        $replacement = '<li class="first ';
+        return preg_replace($pattern, $replacement, $wp_list_categories);
 }
-echo get_category_parents( $child, TRUE, ' > ' );
-              ?>
+add_filter('wp_list_categories','add_class_wp_list_categories');
+
+echo wp_list_categories( $args ); 
+?>               
            </div>
             
             <h1 class="fw-bold bg-secondary text-white py-4 px-2 my-2 rounded" >

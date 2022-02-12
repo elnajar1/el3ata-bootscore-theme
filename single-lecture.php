@@ -15,7 +15,7 @@
             
             <div class = "bg-light p-2">
               <?php 
-                the_category( ' > ', 'multiple', $post->ID); l
+                the_category( ' > ', 'multiple', $post->ID); 
               ?>
            </div>
             
@@ -98,7 +98,7 @@
                   );
                   
                   ?>
-                  <div class ="">
+                  <div class ="p-2">
                     <iframe style ="width: 100vw;height: calc(100vw/1.77); "   src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                   <?php

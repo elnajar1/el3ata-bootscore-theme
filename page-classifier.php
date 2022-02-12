@@ -5,7 +5,7 @@
 <div id="content" class="site-content container">
   <div id="primary" class="content-area">
     
-    <div class = "row py-4">
+    <div class = "row py-5">
       <div class = "col">
         <h2 class = "fw-bold text-secondary">
           عطاء 
@@ -19,7 +19,7 @@
     <div class = "row">
       <div class = "col classifier-container py-4 pb-4">
         
-        <h3 class = "text-center ">
+        <h3 class = "text-center py-3">
           مُحاضرات البناء المنهجي 
         </h3>
         

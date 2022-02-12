@@ -1,60 +1,81 @@
+:root{
+  /**** Background colors*****/
+  --level-one-clild: #000;
+
+  --level-two-clild: #006666;
+
+  --level-three-clild: #008C8C;
+
+  --li : #b4cfe8;
+
+}
+
 .classifier-container{
-  margin: 20px;
-  border-radius : 10px;
   background: var(--bs-light);;
 }
 
+p{
+  margin: 0;
+}
 .level-one-clild, .level-two-clild, .level-three-clild{
-  padding: 5px;
   font-weight: bold;
-  border-radius: 5px 0 0 5px;
-  border-right : 5px solid var(--bs-warning);
 }
 
 .level-one-clild-posts, .level-two-clild-posts, .level-three-clild-posts{
-  margin: 5px;
-  border : 2px 0 2px 0 solid var(--bs-warning);
+  padding: 0;
+  border-radius: 0px 0px 5px 0px;
+
 }
 
 /****** Levels Title ******/
-.level-one-clild{
-  background: var(--bs-gray-900);
+.level-one-clild {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  padding: 15px;
+  background: var(--level-one-clild);
   color: white;
+  border-radius: 5px 5px 0px 0;
 } 
 
 .level-two-clild{
-  margin-right: 30px; 
-  background: var(--bs-gray-700);
+  border-right: 20px solid var(--level-one-clild);
+  margin-top: 15px;
+  padding: 10px;
+  background: var(--level-two-clild);
   color: white;
 } 
 
 .level-three-clild {
-  margin-right: 40px; 
-  background: var(--bs-gray-400);
+  padding: 5px;
+  margin-right: 20px;
+  border-right: 20px solid var(--level-two-clild);
+  background: var(--level-three-clild);
   color: white;
 } 
 
 /****** Posts ******/
+.level-one-clild-posts{
+  border-right: 20px solid var(--level-one-clild);
+} 
+
+.level-two-clild-posts {
+  border-right: 20px solid var(--level-two-clild);
+}
+
+.level-three-clild-posts {
+  margin-right: 20px !important;
+  border-right: 20px solid var(--level-three-clild);
+} 
+
 .classifier-container ul {
   list-style-position:inside;
   list-style-type: decimal;
+  margin: 0;
 }
 
 .classifier-container li {
   padding: 5px;
-  margin: 5px;
-  border: 0.5px solid gray;
-  border-radius: 5px 0 0 5px;
+  margin: 0px 0px 5px 0;
+  background: #eee;
 }
-
-.level-one-clild-posts {
-  
-} 
-
-.level-two-clild-posts {
-  margin-right: 30px; 
-}
-
-.level-three-clild-posts {
-  margin-right: 40px; 
-} 
+/**********/

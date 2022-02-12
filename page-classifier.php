@@ -2,11 +2,21 @@
   get_header();
 ?>
 
-<div id="content" class="site-content container py-5 mt-4">
+<div id="content" class="site-content container">
   <div id="primary" class="content-area">
     
     <div class = "row">
-      <div class = "col classifier-container">
+      <div class = "col">
+        <h2 style = "border-bottom: 3px solid var(--bs-secondary)">
+          عطاء 
+        </h2>
+        <p class = "text-muted">
+          مذكرة طالب البناء المنهجي 
+        </p>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col classifier-container pb-4">
       
         <?php
         

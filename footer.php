@@ -116,9 +116,13 @@
     </div>
   </div>
 
-  <div class="bootscore-info bg-dark text-muted border-top py-2 text-center">
+  <div class="bootscore-info bg-light text-muted border-top py-2 text-center">
     <div class="container">
-      <small> وعلم يُنتفع به - <?php bloginfo('name'); ?></small>
+      <small> 
+        <?php bloginfo('name'); ?>
+        - 
+        علم يُنتفع به 
+      </small>
       <br>
       <small> WordPress - El3ata Bootscore Theme </small>
     </div>

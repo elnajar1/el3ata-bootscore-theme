@@ -65,7 +65,7 @@ echo $term->name . ">";
               ?> 
               
               <?php 
-                if ( !empty( the_post_thumbnail() ) ) { ?>
+                if ( !empty( has_post_thumbnail() ) ) { ?>
                   
                   <button  onclick ="document.getElementById('thumbnail').style.display = 'block' " class = "my-1 btn btn-sm btn-outline-secondary" >
                     <i class="text-warning bi bi-image"></i>

@@ -13,27 +13,56 @@
         <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
           <div class="">
             
-            <div class = "bg-light p-2">
-              <?php 
-
-$args = array(
-
-    'hide_empty'         => 0,
-    'echo'               => 1,
-    'taxonomy'           => 'category',
-    'hierarchical'  =>1,
-    'show_count' => 1,
-
+            <div class = "bg-light p-2">m
+              
+              <?php
+$parent_terms = get_terms(
+    'lecture_category',
+    array(
+        'parent' => 13, 
+    )
 );
 
-function add_class_wp_list_categories($wp_list_categories) {
-        $pattern = '/<li class="/is';
-        $replacement = '<li class="first ';
-        return preg_replace($pattern, $replacement, $wp_list_categories);
-}
-add_filter('wp_list_categories','add_class_wp_list_categories');
+foreach ( $parent_terms as $parent_term ) {
 
-echo wp_list_categories( $args ); 
+    $child_terms = get_terms(
+        'lecture_category'
+        array(
+            'child_of' => $parent_term->term_id,
+        )
+    );
+    
+    foreach ( $child_terms as $child_term ) {
+    
+        $args = array(
+            'post_type' => 'product',
+            'tax_query' => array(
+                array(
+                    'taxonomy'      => 'name_of_your_taxonomy',
+                    'field'         => 'slug',
+                    'terms'         => $child_term->slug,
+                ),
+            ),
+        );
+    
+        $loop = new WP_Query($args);
+        
+        if ( $loop->have_posts() ) :
+        
+            while ( $loop->have_posts() ) :
+                $loop->the_post();
+            
+                echo '<h3>' . $parent_term->name . '</h3>';
+                echo '<h4>' . $parent_term->name . '</h4>';
+                echo get_the_title();
+
+            endwhile;
+            wp_reset_postdata();
+        endif;
+    }
+}
+
+ 
 ?>               
            </div>
             

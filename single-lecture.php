@@ -40,7 +40,7 @@
                         'taxonomy' => $taxonomy,
                         'include'  => $term_ids
                     ) );
-                
+                    var_dump ($terms) ;
                     $terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
                 
                     // Display post categories.
@@ -100,7 +100,7 @@
             
             <div class="bg-light py-2 my-2 rounded">
               <div id = "thumbnail" style = "display : none">
-                <?php the_post_thumbnail('', ['class' => 'py-2' ] ) ?>
+                <?php the_post_thumbnail('', ['class' => 'p-1' ] ) ?>
               </div>
               <?php the_content(); ?> 
             </div>
@@ -128,7 +128,9 @@
                   );
                   
                   ?>
-                  <iframe class = "" width="100%" height="350" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class ="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
                   <?php
                 }
               ?>

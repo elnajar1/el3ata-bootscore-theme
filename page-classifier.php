@@ -11,7 +11,9 @@
           عطاء 
         </h2>
         <p class = "text-muted">
-          مذكرة طالب البناء المنهجي 
+          مذكرة -طالب البناء المنهجي 
+         <br>
+         تلخيص - تفريغ - تشجير - مشاهدة - واكثر بإذن الله 
         </p>
       </div>
     </div>
@@ -19,7 +21,7 @@
     <div class = "row">
       <div class = "col classifier-container py-4 pb-4">
         
-        <h3 class = "text-center py-3">
+        <h3 class = "text-center py-1">
           مُحاضرات البناء المنهجي 
         </h3>
         

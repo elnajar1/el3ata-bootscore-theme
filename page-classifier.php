@@ -17,9 +17,9 @@
     </div>
     
     <div class = "row">
-      <div class = "col classifier-container py-2 pb-4">
+      <div class = "col classifier-container py-d pb-4">
         
-        <h2 class = "m-auto fw-bold">
+        <h2 class = "border border-bottom-0 rounded ">
           مُحاضرات البناء المنهجي 
         </h2>
         

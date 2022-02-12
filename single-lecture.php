@@ -13,18 +13,8 @@
         <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
           <main>
             
-            <div class = "bg-light p-2">m
-           <?php
-            $terms = get_the_terms( $post->ID , 'lecture_category' );
-
-foreach ( $terms as $term ) {
-
-echo $term->name . ">";
-
-}
-
-?>
-              ?>               
+            <div class = "bg-light p-2">
+              <?php the_breadcrumb(); ?>        
            </div>
             
             <header>

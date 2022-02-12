@@ -13,7 +13,7 @@
         <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
           <main>
             
-            <div class = "bg-light p-2">
+            <div class = "d-none bg-light p-2">
               <?php the_breadcrumb(); ?>        
            </div>
             

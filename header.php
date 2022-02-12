@@ -102,7 +102,7 @@
 
               <!-- Navbar Toggler -->
               <button class="btn btn-link d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
-                <i class="bi bi-list fs-5" ></i><span class="visually-hidden-focusable">Menu</span>
+                <i class="bi bi-list fs-5 text-white" ></i><span class="visually-hidden-focusable">Menu</span>
               </button>
 
             </div><!-- .header-actions -->

@@ -11,7 +11,8 @@
 }
 
 .classifier-container{
-  background: var(--bs-light);;
+  background: var(--bs-light);
+  max-width : 700px;
 }
 
 p{

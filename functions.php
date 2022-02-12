@@ -155,66 +155,6 @@ if (!function_exists('bootscore_widgets_init')) :
     ));
     // Sidebar End
 
-    // Top Footer
-    register_sidebar(array(
-      'name' => esc_html__('Top Footer', 'bootscore'),
-      'id' => 'top-footer',
-      'description' => esc_html__('Add widgets here.', 'bootscore'),
-      'before_widget' => '<div class="footer_widget mb-5">',
-      'after_widget' => '</div>',
-      'before_title' => '<h2 class="widget-title">',
-      'after_title' => '</h2>'
-    ));
-    // Top Footer End
-
-    // Footer 1
-    register_sidebar(array(
-      'name' => esc_html__('Footer 1', 'bootscore'),
-      'id' => 'footer-1',
-      'description' => esc_html__('Add widgets here.', 'bootscore'),
-      'before_widget' => '<div class="footer_widget mb-4">',
-      'after_widget' => '</div>',
-      'before_title' => '<h2 class="widget-title h4">',
-      'after_title' => '</h2>'
-    ));
-    // Footer 1 End
-
-    // Footer 2
-    register_sidebar(array(
-      'name' => esc_html__('Footer 2', 'bootscore'),
-      'id' => 'footer-2',
-      'description' => esc_html__('Add widgets here.', 'bootscore'),
-      'before_widget' => '<div class="footer_widget mb-4">',
-      'after_widget' => '</div>',
-      'before_title' => '<h2 class="widget-title h4">',
-      'after_title' => '</h2>'
-    ));
-    // Footer 2 End
-
-    // Footer 3
-    register_sidebar(array(
-      'name' => esc_html__('Footer 3', 'bootscore'),
-      'id' => 'footer-3',
-      'description' => esc_html__('Add widgets here.', 'bootscore'),
-      'before_widget' => '<div class="footer_widget mb-4">',
-      'after_widget' => '</div>',
-      'before_title' => '<h2 class="widget-title h4">',
-      'after_title' => '</h2>'
-    ));
-    // Footer 3 End
-
-    // Footer 4
-    register_sidebar(array(
-      'name' => esc_html__('Footer 4', 'bootscore'),
-      'id' => 'footer-4',
-      'description' => esc_html__('Add widgets here.', 'bootscore'),
-      'before_widget' => '<div class="footer_widget mb-4">',
-      'after_widget' => '</div>',
-      'before_title' => '<h2 class="widget-title h4">',
-      'after_title' => '</h2>'
-    ));
-    // Footer 4 End
-
     // 404 Page
     register_sidebar(array(
       'name' => esc_html__('404 Page', 'bootscore'),
@@ -269,7 +209,7 @@ function bootscore_scripts() {
  //single-lecture.php custom css
   wp_enqueue_style( 'lecture-css', get_template_directory_uri() . '/css/lecture.css', false ); 
  
-  // Fontawesome
+  // Fontawesome ( will be replaced by bootstrap icons and then removed en'sha allah)
   wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/lib/fontawesome.min.css', array(), $modificated_fontawesomeCss);
   
   //bootstrap-icons

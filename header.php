@@ -101,8 +101,8 @@
               </button>
 
               <!-- Navbar Toggler -->
-              <button class="btn btn-outline-secondary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
-                <i class="bi bi-list"></i><span class="visually-hidden-focusable">Menu</span>
+              <button class="btn btn-light d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
+                <i class="bi bi-list fs-5" ></i><span class="visually-hidden-focusable">Menu</span>
               </button>
 
             </div><!-- .header-actions -->

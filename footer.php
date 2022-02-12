@@ -14,7 +14,41 @@
 
 <footer>
 
-  <div class="bootscore-footer bg-light pt-5 pb-3">
+  <div class="bootscore-footer bg-dark pt-5 pb-3">
+    
+    <div class="container">
+      
+      <p class "fw-bolder text-white border-bottom" >
+        روابط
+      </p>
+      
+      <ul>
+        <li>
+          <a href = "http://el3ata.com/%d9%83%d9%8a%d9%81%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%b3%d8%a7%d9%87%d9%85%d8%a9-%d8%a8%d8%a7%d9%84%d9%86%d8%b4%d8%b1-%d9%88-%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b1-%d9%81%d9%8a-%d8%b9%d8%b7%d8%a7/">
+            المشاركة بالنشر و التعديل
+          </a>
+        </li>
+        <li>
+          <a href = "http://el3ata.com/%d8%a7%d9%84%d9%85%d8%b3%d8%a7%d9%87%d9%85%d8%a9-%d9%81%d9%8a-%d8%a8%d8%b1%d9%85%d8%ac%d8%a9-%d9%88%d8%aa%d8%b7%d9%88%d9%8a%d8%b1-%d9%85%d9%88%d9%82%d8%b9-%d8%b9%d8%b7%d8%a7%d8%a1/">
+              المشاركة برمجيا
+              | Developers 
+          </a>
+        </li>
+      </ul>
+      
+      <div class = "text-center text-white">
+        <a class = "m-2" href ="https://github.com/moud449/el3ata-bootscore-theme">
+          <i class="bi bi-github"></i>
+        </a>
+        <a class = "m-2" href ="https://t.me/BinaaManhaji">
+          <i class="bi bi-telegram"></i> 
+        </a>
+      </div>
+      
+    </div>
+    
+    <div class="container">
+      
     <div class="container">
 
       <!-- Top Footer Widget -->
@@ -82,9 +116,11 @@
     </div>
   </div>
 
-  <div class="bootscore-info bg-light text-muted border-top py-2 text-center">
+  <div class="bootscore-info bg-dark text-light border-top py-2 text-center">
     <div class="container">
-      <small>&copy;&nbsp;<?php echo Date('Y'); ?> - <?php bloginfo('name'); ?></small>
+      <small> وعلم يُنتفع به - <?php bloginfo('name'); ?></small>
+      <br>
+      <small> WordPress - El3ata Bootscore Theme </small>
     </div>
   </div>
 

@@ -35,10 +35,10 @@ foreach ( $parent_terms as $parent_term ) {
     foreach ( $child_terms as $child_term ) {
     
         $args = array(
-            'post_type' => 'product',
+            'post_type' => 'lecture',
             'tax_query' => array(
                 array(
-                    'taxonomy'      => 'name_of_your_taxonomy',
+                    'taxonomy'      => 'lecture_category',
                     'field'         => 'slug',
                     'terms'         => $child_term->slug,
                 ),

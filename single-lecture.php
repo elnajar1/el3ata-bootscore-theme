@@ -26,7 +26,7 @@ $parent_terms = get_terms(
 foreach ( $parent_terms as $parent_term ) {
 
     $child_terms = get_terms(
-        'lecture_category'
+        'lecture_category', 
         array(
             'child_of' => $parent_term->term_id,
         )

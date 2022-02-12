@@ -53,23 +53,17 @@
               <?php 
                 if ( !empty($details['summarization_files']['url']) ) { ?>
                   
-                  <button onclick = "document.getElementById('thumbnail').style.display = 'block'" class = "btn btn-sm btn-outline-secondary" >
-                    <i class="text-danger bi bi-youtube"></i>
+                  <a href ="#thumbnail" class = "btn btn-sm btn-outline-secondary" >
+                    <i class="text-warning bi bi-image"></i>
                     تشجير 
-                  </button>
+                  </a>
                 <?php
                 }
               ?> 
             </div> 
             
             <div class="bg-light py-2 my-2 rounded">
-             
-              <div id = "thumbnail" style ="display: none">
-                <?php the_post_thumbnail('', ['class' => '' ] ) ?>
-              </div>
-              
               <?php the_content(); ?> 
-         
             </div>
             
             <div id ="video" class="bg-light py-2 my-2 rounded">
@@ -95,10 +89,14 @@
                   );
                   
                   ?>
-                  <iframe class = "w-100 h-auto" width="560" height="315" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class = "w-100 h-100" width="560" height="315" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <?php
                 }
               ?>
+            </div>
+            
+            <div id = "thumbnail">
+              <?php the_post_thumbnail('', ['class' => '' ] ) ?>
             </div>
             
           </div>

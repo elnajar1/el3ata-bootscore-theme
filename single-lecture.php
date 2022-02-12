@@ -80,7 +80,9 @@ echo $term->name . ">";
               <div id = "thumbnail" style = "display : none">
                 <?php the_post_thumbnail('', ['class' => 'p-1' ] ) ?>
               </div>
-              <?php the_content(); ?> 
+              <article>
+                <?php the_content(); ?>
+              <article/>
             </div>
             
             <div id ="video" class="bg-light py-2 my-2 rounded">

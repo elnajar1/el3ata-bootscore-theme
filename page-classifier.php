@@ -7,7 +7,7 @@
     
     <div class = "row py-4">
       <div class = "col">
-        <h2 class = "fw-bolder" style = "background: var(--bs-light)">
+        <h2 class = "fw-bold text-secondary">
           عطاء 
         </h2>
         <p class = "text-muted">
@@ -18,7 +18,11 @@
     
     <div class = "row">
       <div class = "col classifier-container pb-4">
-      
+        
+        <h2 class = "btn btn-dark">
+          مُحاضرات البناء المنهجي 
+        </h2>
+        
         <?php
         
         //parent category (then child(category) and subchild, then posts(lectures) in each category ) 

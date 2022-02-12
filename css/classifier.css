@@ -38,7 +38,6 @@ p{
 
 .level-two-clild{
   border-right: 20px solid var(--level-one-clild);
-  margin-top: 15px;
   padding: 10px;
   background: var(--level-two-clild);
   color: white;

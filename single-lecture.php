@@ -19,7 +19,7 @@
             
             <div class="bg-light py-2 my-2 rounded">
               <?php 
-                if ( $details['handout_files']['url'] ) { ?>
+                if ( !empty($details['handout_files']['url']) ) { ?>
                   <a href = "<?php echo $details['handout_files']['url'] ?>" class = "btn btn-sm btn-outline-secondary" >
                     <i class="bi bi-download"></i> 
                     <i class="bi bi-file-earmark-pdf"></i>
@@ -30,7 +30,7 @@
               ?> 
               
               <?php 
-                if ( $details['summarization_files']['url'] ) { ?>
+                if ( !empty($details['summarization_files']['url']) ) { ?>
                   <a href = "<?php echo $details['summarization_files']['url'] ?>" class = "btn btn-sm btn-outline-secondary" >
                     <i class="bi bi-download"></i>
                     <i class="bi bi-file-earmark-text"></i> 
@@ -40,15 +40,36 @@
                 }
               ?> 
               
-              <a href = "#video" class = "btn btn-sm btn-outline-secondary" >
-                <i class="text-danger bi bi-youtube"></i>
-                مشاهدة 
-              </a>
+              <?php 
+                if ( !empty($details['url']) ) { ?>
+                  <a href = "#video" class = "btn btn-sm btn-outline-secondary" >
+                    <i class="text-danger bi bi-youtube"></i>
+                    مشاهدة 
+                  </a>
+                <?php 
+                }
+              ?> 
               
+              <?php 
+                if ( !empty($details['summarization_files']['url']) ) { ?>
+                  
+                  <button onclick = "thumbnail.style.display = 'block'" class = "btn btn-sm btn-outline-secondary" >
+                    <i class="text-danger bi bi-youtube"></i>
+                    تشجير 
+                  </button>
+                <?php
+                }
+              ?> 
             </div> 
             
             <div class="bg-light py-2 my-2 rounded">
+             
+              <div name = "thumbnail" style ="display: none">
+                <?php the_post_thumbnail('', ['class' => '' ] ) ?>
+              </div>
+              
               <?php the_content(); ?> 
+         
             </div>
             
             <div id ="video" class="bg-light py-2 my-2 rounded">

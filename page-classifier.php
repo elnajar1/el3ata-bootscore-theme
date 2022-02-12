@@ -10,12 +10,15 @@
         <h2 class = "fw-bold text-secondary">
           عطاء 
         </h2>
-        <p class = "text-muted">
+        <p class = "">
           مذكرة -طالب البناء المنهجي 
          <br>
-         تلخيص - تفريغ - تشجير - مشاهدة
-         <br>
-         وأكثر إن شاء الله 
+         <small class = "text-muted">
+           (
+           تلخيص - تفريغ - تشجير 
+           وأكثر إن شاء الله 
+           ) 
+        </small>
         </p>
       </div>
     </div>

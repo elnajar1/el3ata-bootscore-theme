@@ -5,13 +5,13 @@
 
 get_header();  ?>
 
-<div id="content" class="site-content container py-5 mt-4">
+<div id="content" class="site-content container py-5">
   <div id="primary" class="content-area">
 
     <!-- Hook to add something nice -->
     <?php bs_after_primary(); ?>
 
-    <?php the_breadcrumb(); ?>
+    <?php //the_breadcrumb(); ?>
 
     <div class="row">
       <div class="col-md-8 col-xxl-9">
@@ -26,16 +26,13 @@ get_header();  ?>
               <small class="text-muted">
                 <?php
                 bootscore_date();
-                _e(' by ', 'bootscore');
-                the_author_posts_link();
-                bootscore_comment_count();
                 ?>
               </small>
             </p>
             <?php bootscore_post_thumbnail(); ?>
           </header>
 
-          <div class="entry-content">
+          <div class="post-content bg-light">
             <?php the_content(); ?>
           </div>
 
@@ -43,16 +40,6 @@ get_header();  ?>
             <div class="mb-4">
               <?php bootscore_tags(); ?>
             </div>
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-center">
-                <li class="page-item">
-                  <?php previous_post_link('%link'); ?>
-                </li>
-                <li class="page-item">
-                  <?php next_post_link('%link'); ?>
-                </li>
-              </ul>
-            </nav>
           </footer>
 
           <?php comments_template(); ?>
@@ -60,7 +47,6 @@ get_header();  ?>
         </main> <!-- #main -->
 
       </div><!-- col -->
-      <?php get_sidebar(); ?>
     </div><!-- row -->
 
   </div><!-- #primary -->

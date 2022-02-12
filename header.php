@@ -96,8 +96,8 @@
               </div>
 
               <!-- Search Toggler Mobile -->
-              <button class="btn btn-outline-secondary d-lg-none ms-1 ms-md-2 top-nav-search-md" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
-                <i class="bi bi-search"></i><span class="visually-hidden-focusable">Search</span>
+              <button class="btn btn-link d-lg-none ms-1 ms-md-2 top-nav-search-md" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
+                <i class="bi bi-search fs-5 text-white "></i><span class="visually-hidden-focusable">Search</span>
               </button>
 
               <!-- Navbar Toggler -->

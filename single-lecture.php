@@ -15,7 +15,7 @@
             
             <div class = "bg-light p-2">m
            <?php
-            $terms = get_the_terms( $post->ID , 'taxonomyname' );
+            $terms = get_the_terms( $post->ID , 'lecture_category' );
 
 foreach ( $terms as $term ) {
 

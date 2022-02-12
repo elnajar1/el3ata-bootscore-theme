@@ -13,14 +13,50 @@
         <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
           <div class="">
             
+            <div class = "bg-light p-2">
+              <?php
+                $taxonomy = 'lecture_category';
+                
+                // Get the term IDs assigned to post.
+                $post_terms = wp_get_object_terms(
+                    $post->ID,
+                    $taxonomy,
+                    array(
+                        'fields' => 'ids'
+                    )
+                );
+                
+                // Separator between links.
+                $separator = ',';
+                
+                if ( ! empty( $post_terms ) && ! is_wp_error( $post_terms ) ) {
+                
+                    $term_ids = implode( ',' , $post_terms );
+                
+                    $terms = wp_list_categories( array(
+                        'title_li' => '',
+                        'style'    => 'none',
+                        'echo'     => false,
+                        'taxonomy' => $taxonomy,
+                        'include'  => $term_ids
+                    ) );
+                
+                    $terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
+                
+                    // Display post categories.
+                    echo  $terms;
+                }
+              ?>
+            </div>
+            
             <h1 class="fw-bold bg-secondary text-white py-4 px-2 my-2 rounded" >
               <?php the_title(); ?> 
             </h1>
             
             <div class="bg-light py-2 my-2 rounded">
-                            <?php 
+              <?php 
                 if ( !empty($details['url']) ) { ?>
-                  <a href = "#video" class = "py-1 btn btn-sm btn-outline-secondary" >
+                  <a href = "#video" class = "my-1 btn btn-sm btn-outline-secondary" >
                     <i class="text-danger bi bi-youtube"></i>
                     مشاهدة 
                   </a>
@@ -30,7 +66,7 @@
               
               <?php 
                 if ( !empty($details['handout_files']['url']) ) { ?>
-                  <a href = "<?php echo $details['handout_files']['url'] ?>" class = "py-1 btn btn-sm btn-outline-secondary" >
+                  <a href = "<?php echo $details['handout_files']['url'] ?>" class = "my-1 btn btn-sm btn-outline-secondary" >
                     <i class="bi bi-download"></i> 
                     <i class="bi bi-file-earmark-pdf"></i>
                     التفريغ
@@ -41,7 +77,7 @@
               
               <?php 
                 if ( !empty($details['summarization_files']['url']) ) { ?>
-                  <a href = "<?php echo $details['summarization_files']['url'] ?>" class = "py-1 btn btn-sm btn-outline-secondary" >
+                  <a href = "<?php echo $details['summarization_files']['url'] ?>" class = "my-1 btn btn-sm btn-outline-secondary" >
                     <i class="bi bi-download"></i>
                     <i class="bi bi-file-earmark-text"></i> 
                      التلخيص
@@ -53,7 +89,7 @@
               <?php 
                 if ( !empty($details['summarization_files']['url']) ) { ?>
                   
-                  <button  onclick ="document.getElementById('thumbnail').style.display = 'block' " class = "py-1 btn btn-sm btn-outline-secondary" >
+                  <button  onclick ="document.getElementById('thumbnail').style.display = 'block' " class = "my-1 btn btn-sm btn-outline-secondary" >
                     <i class="text-warning bi bi-image"></i>
                     تشجير 
                   </button>
@@ -64,7 +100,7 @@
             
             <div class="bg-light py-2 my-2 rounded">
               <div id = "thumbnail" style = "display : none">
-                <?php the_post_thumbnail('', ['class' => '' ] ) ?>
+                <?php the_post_thumbnail('', ['class' => 'py-2' ] ) ?>
               </div>
               <?php the_content(); ?> 
             </div>
@@ -92,7 +128,7 @@
                   );
                   
                   ?>
-                  <iframe class = "" width="100%" height="100%" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class = "" width="100%" height="350" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <?php
                 }
               ?>

@@ -17,11 +17,11 @@
     </div>
     
     <div class = "row">
-      <div class = "col classifier-container py-d pb-4">
+      <div class = "col classifier-container py-4 pb-4">
         
-        <h2 class = "border border-bottom-0 rounded ">
+        <h3 class = "text-center ">
           مُحاضرات البناء المنهجي 
-        </h2>
+        </h3>
         
         <?php
         

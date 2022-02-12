@@ -14,40 +14,10 @@
           <div class="">
             
             <div class = "bg-light p-2">
-              <?php
-                $taxonomy = 'lecture_category';
-                
-                // Get the term IDs assigned to post.
-                $post_terms = wp_get_object_terms(
-                    $post->ID,
-                    $taxonomy,
-                    array(
-                        'fields' => 'ids'
-                    )
-                );
-                
-                // Separator between links.
-                $separator = ',';
-                
-                if ( ! empty( $post_terms ) && ! is_wp_error( $post_terms ) ) {
-                
-                    $term_ids = implode( ',' , $post_terms );
-                
-                    $terms = get_terms( array(
-                        'title_li' => '',
-                        'style'    => 'none',
-                        'echo'     => false,
-                        'taxonomy' => $taxonomy,
-                        'include'  => $term_ids
-                    ) );
-                    var_dump ($terms) ;
-                    $terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
-                
-                    // Display post categories.
-                    echo  $terms;
-                }
+              <?php 
+                the_category( ' > ', 'multiple', $post->ID); l
               ?>
-            </div>
+           </div>
             
             <h1 class="fw-bold bg-secondary text-white py-4 px-2 my-2 rounded" >
               <?php the_title(); ?> 

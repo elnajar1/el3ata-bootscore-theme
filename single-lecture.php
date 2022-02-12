@@ -53,7 +53,7 @@
               <?php 
                 if ( !empty($details['summarization_files']['url']) ) { ?>
                   
-                  <button onclick = "thumbnail.style.display = 'block'" class = "btn btn-sm btn-outline-secondary" >
+                  <button onclick = "document.getElementById('thumbnail').style.display = 'block'" class = "btn btn-sm btn-outline-secondary" >
                     <i class="text-danger bi bi-youtube"></i>
                     تشجير 
                   </button>
@@ -64,7 +64,7 @@
             
             <div class="bg-light py-2 my-2 rounded">
              
-              <div name = "thumbnail" style ="display: none">
+              <div id = "thumbnail" style ="display: none">
                 <?php the_post_thumbnail('', ['class' => '' ] ) ?>
               </div>
               

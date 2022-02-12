@@ -18,7 +18,7 @@
     
     <div class="container">
       
-      <p class "fw-bolder text-light border-bottom border-light" >
+      <p class = "fw-bolder text-white border-bottom border-light" >
         روابط
       </p>
       

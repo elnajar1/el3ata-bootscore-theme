@@ -91,28 +91,30 @@
                   </p>
                  
                 <?php
-                }elseif ( stripos($details['url'],'playlist') === true ){
-                 //YouTube playlist ?>
-                  <p>
-                    للاستاع لقائمة التشغيل هذه علي يوتيوب، هذا هو 
-                    <a href ="<?php echo $details['url'] ?>">
-                       رابط السلسلة 
-                    </a>
-                  </p>
-                 
-                <?php
-                } else {
-                  //is youtube
-                  preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#",
-                    $details['url'] ,
-                    $youtube_video_id
-                  );
+                }else {
                   
-                  ?>
-                  <div class ="p-2">
-                    <iframe style ="width: 100vw;height: calc(100vw/1.77); " class ="rounded" src="http://www.youtube.com/embed/<?php echo $details['url']  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
-                  <?php
+                  if(stripos($details['url'],'playlist') === true ){
+                    //YouTube playlist 
+                    ?>
+                    <div class ="p-2">
+                      <iframe style ="width: 100vw;height: calc(100vw/1.77); " class ="rounded" src="http://www.youtube.com/embed/<?php echo $details['url']  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <?php 
+                    
+                  }else{
+                   //YouTube video
+                    preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#",
+                      $details['url'] ,
+                      $youtube_video_id
+                    );
+                    
+                    ?>
+                    <div class ="p-2">
+                      <iframe style ="width: 100vw;height: calc(100vw/1.77); " class ="rounded" src="http://www.youtube.com/embed/<?php echo $youtube_video_id[0]  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <?php 
+                  }
+                  
                 }
               ?>
             </div>

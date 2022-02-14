@@ -96,8 +96,9 @@
                   if(stripos($details['url'],'playlist') === true ){
                     //YouTube playlist 
                     ?>
+                    hhhjjjj
                     <div class ="p-2">
-                      <iframe style ="width: 100vw;height: calc(100vw/1.77); " class ="rounded" src="http://www.youtube.com/embed/<?php echo $details['url']  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe style ="width: 100vw;height: calc(100vw/1.77); " class ="rounded" src="<?php echo $details['url']  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <?php 
                     

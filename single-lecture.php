@@ -80,14 +80,13 @@
             <div id ="video" class="bg-light py-2 my-2 rounded">
               <?php
               
-                if( stripos($details['url'],'youtu') === false){
+                if( stripos($details['url'],'youtu') === false ||  stripos($details['url'],'playlist') === true){
                   //not YouTube video ?>
                   <p>
                     للاستاع للمحاضرة ،  هذا هو
                     <a href ="<?php echo $details['url'] ?>">
                        رابط محاضرة 
                        ( <?php the_title(); ?> ) 
-                       كمقطع صوتي علي تلجرام
                     </a>
                   </p>
                  

@@ -93,7 +93,7 @@
                 <?php
                 }else {
                   
-                  if( strpos($details['url'],'playlist') === true ){
+                  if( strpos($details['url'],'playlist') ){
                     //YouTube playlist 
                     ?>
                     YouTube playlist 

@@ -80,7 +80,7 @@
             <div id ="video" class="bg-light py-2 my-2 rounded">
               <?php
               
-                if( stripos($details['url'],'youtu') === false){
+                if( strpos($details['url'],'youtu') === false){
                   //not YouTube video ?>
                   <p>
                     للاستاع للمحاضرة ،  هذا هو
@@ -93,12 +93,12 @@
                 <?php
                 }else {
                   
-                  if(stripos($details['url'],'playlist') === true ){
+                  if( strpos($details['url'],'playlist') === true ){
                     //YouTube playlist 
                     ?>
-                    hhhjjjj
+                    YouTube playlist 
                     <div class ="p-2">
-                      <iframe style ="width: 100vw;height: calc(100vw/1.77); " class ="rounded" src="<?php echo $details['url']  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe style ="width: 100vw;height: calc(100vw/1.77); " class ="rounded" src="http://www.youtube.com/embed/<?php echo $details['url']  ?>" title="<?php the_title(); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <?php 
                     

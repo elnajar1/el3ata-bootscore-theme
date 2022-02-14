@@ -80,7 +80,7 @@
             <div id ="video" class="bg-light py-2 my-2 rounded">
               <?php
               
-                if( (stripos($details['url'],'youtu') === false) || (stripos($details['url'],'playlist') === true) ){
+                if( stripos($details['url'],'youtu') === false){
                   //not YouTube video ?>
                   <p>
                     للاستاع للمحاضرة ،  هذا هو
@@ -90,7 +90,17 @@
                     </a>
                   </p>
                  
-                 <?php
+                <?php
+                }elseif (( (stripos($details['url'],'youtu') === true) && (stripos($details['url'],'playlist') === true) )){
+                 //YouTube playlist ?>
+                  <p>
+                    للاستاع لقائمة التشغيل هذه علي يوتيوب، هذا هو 
+                    <a href ="<?php echo $details['url'] ?>">
+                       رابط السلسلة 
+                    </a>
+                  </p>
+                 
+                <?php
                 } else {
                   //is youtube
                   preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#",

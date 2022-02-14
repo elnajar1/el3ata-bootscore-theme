@@ -91,7 +91,7 @@
                   </p>
                  
                 <?php
-                }elseif (( (stripos($details['url'],'youtu') === true) && (stripos($details['url'],'playlist') === true) )){
+                }elseif ( stripos($details['url'],'youtu') === true && stripos($details['url'],'playlist') === true ){
                  //YouTube playlist ?>
                   <p>
                     للاستاع لقائمة التشغيل هذه علي يوتيوب، هذا هو 

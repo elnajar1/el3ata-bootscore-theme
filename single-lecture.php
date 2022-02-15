@@ -75,6 +75,12 @@
               <article class ="post-content">
                 <?php the_content(); ?>
               <article/>
+              <a class ="p-2 " href ="http://el3ata.com/%d9%83%d9%8a%d9%81%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%b3%d8%a7%d9%87%d9%85%d8%a9-%d8%a8%d8%a7%d9%84%d9%86%d8%b4%d8%b1-%d9%88-%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b1-%d9%81%d9%8a-%d8%b9%d8%b7%d8%a7/">
+                <u>
+                  <i class="bi bi-pencil-square"></i>
+                  ساهم بالتعديل 
+                </u>
+              </a>
             </div>
             
             <div id ="video" class="bg-light py-2 my-2 rounded">

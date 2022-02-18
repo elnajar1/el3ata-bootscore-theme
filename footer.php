@@ -42,7 +42,7 @@
       </ul>
       
       <div class = "py-4 text-center">
-        <a class = "p-3" href ="https://github.com/moud449/el3ata-bootscore-theme">
+        <a class = "p-3" href ="https://github.com/elnajar1/el3ata-bootscore-theme">
           <i style="font-size: 2rem;" class="bi bi-github  text-white"></i>
         </a>
         <a class = "p-3" href ="https://t.me/BinaaManhaji">

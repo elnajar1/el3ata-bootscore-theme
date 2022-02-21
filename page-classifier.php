@@ -8,10 +8,10 @@
     <div class = "row py-5">
       <div class = "col">
         <h2 class = "fw-bold text-secondary">
-          عطاء 
+          عطاء (غير رسمي) 
         </h2>
         <p class = "">
-          مذكرة -طالب البناء المنهجي 
+          مذكرة - طالب البناء المنهجي 
          <br>
          <small class = "text-muted">
            (
